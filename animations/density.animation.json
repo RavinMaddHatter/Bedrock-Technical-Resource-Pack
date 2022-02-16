@@ -1,0 +1,24 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.density" : {
+			"loop" : true,
+			"bones" : {
+				"density1_0" : {
+					"rotation" : [
+					  0,
+					  "v.chunk_align_pivot",
+					  0 
+					]
+				},
+				"density1_1" : {
+					"position" : [ 
+					  "v.chunk_align_x",
+					  0,
+					  "v.chunk_align_z"
+					]
+				}
+			}
+		}
+	}
+}

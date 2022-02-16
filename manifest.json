@@ -1,0 +1,18 @@
+{
+	"format_version": 2,
+	"header": {
+		"description": "Show various game mechanic distances and measurements, armor stands with gunpowder, prismarine shards, sticks, planks, turtle eggs, rotten flesh, and spider eyes will show extra data.",
+		"name": "MC_Distances",
+		"uuid": "adcb0130-0b07-4e6f-8e1c-5f240c568ec3",
+		"version": [ 0,0,1 ],
+		"min_engine_version": [ 1, 18, 0 ]
+	},
+	"modules": [
+		{
+			"description": "",
+			"type": "resources",
+			"uuid": "ab6f4976-819b-fc24-9a40-fb2463214b3c",
+			"version": [0, 0, 1]
+		}
+	]
+}

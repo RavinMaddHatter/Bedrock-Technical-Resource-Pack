@@ -1,0 +1,12 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.spawn_distance": {
+      "geometry": "Geometry.spawn_distance",
+      "materials": [ { "*": "Material.spawn_distance" } ],
+      "textures": [ "Texture.spawn_distance" ],
+      "ignore_lighting":true,
+      "light_color_multiplier":1.5
+    }
+  }
+}

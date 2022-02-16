@@ -1,0 +1,12 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.buried_treasure": {
+      "geometry": "Geometry.buried_treasure",
+      "materials": [ { "*": "Material.buried_treasure" } ],
+      "textures": [ "Texture.buried_treasure" ],
+      "ignore_lighting":true,
+      "light_color_multiplier":1.5
+    }
+  }
+}

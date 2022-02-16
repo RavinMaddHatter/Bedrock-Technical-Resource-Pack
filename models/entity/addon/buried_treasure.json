@@ -1,0 +1,36 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.buried_treasure",
+				"texture_width": 1,
+				"texture_height": 1,
+				"visible_bounds_width": 401,
+				"visible_bounds_height": 89,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "treasure1_0",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 0, 0]
+				},
+				{
+					"name": "treasure1_1",
+					"parent": "treasure1_0",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-128, 0, -128],
+							"size": [256, 0.25, 256],
+							"uv": {
+								"up": {"uv": [1, 1], "uv_size": [-1, -1]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

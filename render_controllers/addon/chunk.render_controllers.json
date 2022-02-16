@@ -1,0 +1,20 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.chunk": {
+			"materials": [
+				{
+					"*": "Material.chunk"
+				}
+			],
+			"geometry": "geometry.chunk",
+			"textures": [
+				"Texture.chunk"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		}
+	}
+}

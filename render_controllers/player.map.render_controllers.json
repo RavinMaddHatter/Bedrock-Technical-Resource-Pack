@@ -1,0 +1,380 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.map1": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map1",
+			"textures": [
+				"Texture.map1"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map2": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map2",
+			"textures": [
+				"Texture.map2"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map3": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map3",
+			"textures": [
+				"Texture.map3"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map4": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map4",
+			"textures": [
+				"Texture.map4"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map5": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map5",
+			"textures": [
+				"Texture.map5"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map6": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map6",
+			"textures": [
+				"Texture.map6"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map7": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map7",
+			"textures": [
+				"Texture.map7"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map8": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map8",
+			"textures": [
+				"Texture.map8"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map9": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map9",
+			"textures": [
+				"Texture.map9"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map10": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map10",
+			"textures": [
+				"Texture.map10"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map11": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map11",
+			"textures": [
+				"Texture.map11"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map12": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map12",
+			"textures": [
+				"Texture.map12"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map13": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map13",
+			"textures": [
+				"Texture.map13"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map14": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map14",
+			"textures": [
+				"Texture.map14"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map15": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map15",
+			"textures": [
+				"Texture.map15"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map16": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map16",
+			"textures": [
+				"Texture.map16"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map17": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map17",
+			"textures": [
+				"Texture.map17"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map18": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map18",
+			"textures": [
+				"Texture.map18"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map19": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map19",
+			"textures": [
+				"Texture.map19"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map20": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map20",
+			"textures": [
+				"Texture.map20"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map21": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map21",
+			"textures": [
+				"Texture.map21"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map22": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map22",
+			"textures": [
+				"Texture.map22"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map23": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map23",
+			"textures": [
+				"Texture.map23"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map24": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map24",
+			"textures": [
+				"Texture.map24"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		},
+		"controller.render.map25": {
+			"materials": [
+				{
+					"*": "Material.map"
+				}
+			],
+			"geometry": "geometry.map25",
+			"textures": [
+				"Texture.map25"
+			],
+			"ignore_lighting":true,
+			"is_hurt_color":{},
+			"on_fire_color":{},
+			"light_color_multiplier":1.5
+		}
+	}
+}

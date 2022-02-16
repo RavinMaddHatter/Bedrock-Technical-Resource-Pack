@@ -1,0 +1,22 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.spawn_distance" : {
+			"loop" : true,
+			"bones" : {
+				"spawn1_0" : {
+					"rotation" : [ 0,"query.time_stamp", 0 ]
+				},
+				"spawn1_1" : {
+					"position" : [ 0, 0, 0 ]
+				},
+				"spawn1_2" : {
+					"position" : [ 0, 0, 0 ]
+				},
+				"spawn1_3" : {
+					"position" : [ 0, 0, 0 ]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.egg_aggro": {
+      "geometry": "Geometry.egg_aggro",
+      "materials": [ { "*": "Material.egg_aggro" } ],
+      "textures": [ "Texture.egg_aggro" ],
+      "ignore_lighting":true,
+      "light_color_multiplier":1.5
+    }
+  }
+}

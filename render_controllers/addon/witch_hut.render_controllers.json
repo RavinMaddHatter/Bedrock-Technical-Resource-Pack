@@ -1,0 +1,12 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.witch_hut": {
+      "geometry": "Geometry.witch_hut",
+      "materials": [ { "*": "Material.witch_hut" } ],
+      "textures": [ "Texture.witch_hut" ],
+      "ignore_lighting":true,
+      "light_color_multiplier":1.5
+    }
+  }
+}

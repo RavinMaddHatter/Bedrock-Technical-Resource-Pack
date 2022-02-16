@@ -1,0 +1,12 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.guardian_spots": {
+      "geometry": "Geometry.guardian_spots",
+      "materials": [ { "*": "Material.guardian_spots" } ],
+      "textures": [ "Texture.guardian_spots" ],
+      "ignore_lighting":true,
+      "light_color_multiplier":1.5
+    }
+  }
+}
