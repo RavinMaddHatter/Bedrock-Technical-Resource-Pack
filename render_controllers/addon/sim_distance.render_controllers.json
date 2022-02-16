@@ -3,7 +3,7 @@
   "render_controllers": {
     "controller.render.sim_distance": {
       "geometry": "Geometry.sim_distance",
-      "materials": [ { "*": "Material.sim_distance" } ],
+      "materials": [ { "*": "Material.beam_additive" } ],
       "textures": [ "Texture.sim_distance" ],
       "ignore_lighting":true
     }

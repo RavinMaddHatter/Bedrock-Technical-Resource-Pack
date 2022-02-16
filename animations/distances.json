@@ -1,0 +1,43 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.buried_treasure" : { "loop" : true, "bones" : {
+				"treasure1_0" : { "rotation" : [ 0, "v.chunk_align_pivot", 0 ] },
+				"treasure1_1" : { "position" : [ "v.chunk_align_x", 0, "v.chunk_align_z" ] }
+			}
+		},
+		"animation.chunk": { "loop": true, "bones": {
+				"chunk_pivot": { "rotation": [ 0, "v.chunk_align_pivot_fp", 0 ], "scale":"16/15" },
+				"chunk_pitch": { "rotation": [0, 0, 0] },
+				"chunk":{ "position":[ "v.chunk_align_x", "v.chunk_align_y", "v.chunk_align_z" ] }
+			}
+		},
+		"animation.density" : { "loop" : true, "bones" : {
+				"density1_0" : { "rotation" : [ 0, "v.chunk_align_pivot", 0 ] },
+				"density1_1" : { "position" : [ "v.chunk_align_x", 0, "v.chunk_align_z" ] }
+			}
+		},
+		"animation.guardian_spots": { "loop": true, "bones": {
+				"guardian1_0": { "rotation": [ 0, "v.chunk_align_pivot", 0 ] },
+				"guardian1_1":{ "position":[ "v.chunk_align_x", 0, "v.chunk_align_z" ] }
+			}
+		},
+		"animation.sim_distance" : { "loop" : true, "bones" : {
+				"sim1_0" : { "rotation" : [ 0, "v.chunk_align_pivot", 0 ] },
+				"sim1_1" : { "position" : [ "v.chunk_align_x", 0, "v.chunk_align_z" ] }
+			}
+		},
+		"animation.spawn_distance" : { "loop" : true, "bones" : {
+				"spawn1_0" : { "rotation" : [ 0,"query.time_stamp", 0 ] },
+				"spawn1_1" : { "position" : [ 0, 0, 0 ] },
+				"spawn1_2" : { "position" : [ 0, 0, 0 ] },
+				"spawn1_3" : { "position" : [ 0, 0, 0 ] }
+			}
+		},
+		"animation.witch_hut" : { "loop" : true, "bones" : {
+				"witch1_0" : { "rotation" : [ 0, "v.chunk_align_pivot", 0 ] },
+				"witch1_1" : { "position" : [  "v.chunk_align_x", 0, "v.chunk_align_z" ] }
+			}
+		}
+	}
+}

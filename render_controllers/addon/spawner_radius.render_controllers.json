@@ -1,10 +1,10 @@
 {
   "format_version": "1.8.0",
   "render_controllers": {
-    "controller.render.witch_hut": {
-      "geometry": "Geometry.witch_hut",
+    "controller.render.spawner_radius": {
+      "geometry": "Geometry.spawner_radius",
       "materials": [ { "*": "Material.beam_additive" } ],
-      "textures": [ "Texture.witch_hut" ],
+      "textures": [ "Texture.spawner_radius" ],
       "ignore_lighting":true,
       "light_color_multiplier":1.5
     }

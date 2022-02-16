@@ -1,0 +1,52 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.spawner_radius",
+				"texture_width": 1,
+				"texture_height": 1,
+				"visible_bounds_width": 401,
+				"visible_bounds_height": 89,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "spawner1_0",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "spawner1_1",
+					"parent": "spawner1_0",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-72, 0, -72],
+							"size": [144, 0.25, 144],
+							"uv": {
+								"up": {"uv": [1, 1], "uv_size": [-1, -1]},
+								"down": {"uv": [1, 1], "uv_size": [-1, -1]}
+							}
+						},
+						{
+							"origin": [-72, -16, -72],
+							"size": [144, 0.25, 144],
+							"uv": {
+								"up": {"uv": [1, 1], "uv_size": [-1, -1]},
+								"down": {"uv": [1, 1], "uv_size": [-1, -1]}
+							}
+						},
+						{
+							"origin": [-72, -32, -72],
+							"size": [144, 0.25, 144],
+							"uv": {
+								"up": {"uv": [1, 1], "uv_size": [-1, -1]},
+								"down": {"uv": [1, 1], "uv_size": [-1, -1]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

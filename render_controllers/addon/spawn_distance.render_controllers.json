@@ -3,7 +3,7 @@
   "render_controllers": {
     "controller.render.spawn_distance": {
       "geometry": "Geometry.spawn_distance",
-      "materials": [ { "*": "Material.spawn_distance" } ],
+      "materials": [ { "*": "Material.beam_additive" } ],
       "textures": [ "Texture.spawn_distance" ],
       "ignore_lighting":true,
       "light_color_multiplier":1.5

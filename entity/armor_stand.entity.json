@@ -7,15 +7,7 @@
       "materials": {
         "default": "armor_stand",
 	
-	"spawn_distance": "entity_beam_additive",
-	"sim_distance": "entity_beam_additive",
-	"guardian_spots": "entity_beam_additive",
-	"density": "entity_beam_additive",
-	"egg_aggro": "entity_beam_additive",
-	"witch_hut": "entity_beam_additive",
-	"torch_light": "entity_beam_additive",
-	"buried_treasure": "entity_beam_additive",
-	"scare_radius": "entity_beam_additive"
+	"beam_additive": "entity_beam_additive"
       },
       "textures": {
         "default": "textures/entity/armor_stand",
@@ -28,7 +20,8 @@
 	"witch_hut": "textures/addon/witch_hut",
 	"torch_light": "textures/addon/torch_light",
 	"buried_treasure": "textures/addon/buried_treasure",
-	"scare_radius": "textures/addon/scare_radius"
+	"scare_radius": "textures/addon/scare_radius",
+	"spawner_radius": "textures/addon/spawner_radius"
       },
       "animations": {
         "default_pose": "animation.armor_stand.default_pose",
@@ -74,7 +67,8 @@
 	  "v.witch_show = query.get_equipped_item_name(0) == 'spider_eye';",
 	  "v.torch_show = query.get_equipped_item_name(0) == 'torch';",
 	  "v.treasure_show = query.get_equipped_item_name(0) == 'filled_map' ;",
-	  "v.scare_show = query.get_equipped_item_name(0) == 'gunpowder';"
+	  "v.scare_show = query.get_equipped_item_name(0) == 'gunpowder';",
+	  "v.spawner_show = query.get_equipped_item_name(0) == 'string';"
         ],
         "animate": [
           "controller.pose",
@@ -94,13 +88,14 @@
 	
         "spawn_distance": "geometry.spawn_distance",
         "sim_distance": "geometry.sim_distance",
-		"guardian_spots": "geometry.guardian_spots",
+	"guardian_spots": "geometry.guardian_spots",
 	"density": "geometry.density",
 	"egg_aggro": "geometry.egg_aggro",
 	"witch_hut": "geometry.witch_hut",
 	"torch_light": "geometry.torch_light",
 	"buried_treasure": "geometry.buried_treasure",
-	"scare_radius": "geometry.scare_radius"
+	"scare_radius": "geometry.scare_radius",
+	"spawner_radius": "geometry.spawner_radius"
       },
       "render_controllers": [
         "controller.render.armor_stand",
@@ -114,6 +109,7 @@
 	{"controller.render.torch_light": "v.torch_show"},
 	{"controller.render.buried_treasure": "v.treasure_show"},
 	{"controller.render.scare_radius": "v.scare_show"},
+	{"controller.render.spawner_radius": "v.spawner_show"},
 	"controller.render.armor_stand.ghost_blocks" //structura
       ],
       "enable_attachables": true
