@@ -5,7 +5,7 @@
 			"description": {
 				"identifier": "geometry.spawner_radius",
 				"texture_width": 1,
-				"texture_height": 1,
+				"texture_height": 3,
 				"visible_bounds_width": 401,
 				"visible_bounds_height": 89,
 				"visible_bounds_offset": [0, 0.5, 0]
@@ -21,27 +21,88 @@
 					"pivot": [0, 0, 0],
 					"cubes": [
 						{
-							"origin": [-72, 0, -72],
-							"size": [144, 0.25, 144],
+							"origin": [-264, 0, -264],
+							"size": [528, 0.25, 528],
 							"uv": {
 								"up": {"uv": [1, 1], "uv_size": [-1, -1]},
 								"down": {"uv": [1, 1], "uv_size": [-1, -1]}
 							}
 						},
 						{
-							"origin": [-72, -16, -72],
-							"size": [144, 0.25, 144],
+							"origin": [-264, -16, -264],
+							"size": [528, 0.25, 528],
 							"uv": {
 								"up": {"uv": [1, 1], "uv_size": [-1, -1]},
 								"down": {"uv": [1, 1], "uv_size": [-1, -1]}
 							}
 						},
 						{
-							"origin": [-72, -32, -72],
-							"size": [144, 0.25, 144],
+							"origin": [-264, -32, -264],
+							"size": [528, 0.25, 528],
 							"uv": {
 								"up": {"uv": [1, 1], "uv_size": [-1, -1]},
 								"down": {"uv": [1, 1], "uv_size": [-1, -1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "spawner1_2",
+					"parent": "spawner1_0",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-264, -8, -264],
+							"size": [528, 0.25, 528],
+							"uv": {
+								"up": {"uv": [1, 2], "uv_size": [-1, -1]},
+								"down": {"uv": [1, 2], "uv_size": [-1, -1]}
+							}
+						},
+						{
+							"origin": [-264, 0, -256],
+							"size": [528, 0.25, 528],
+							"pivot": [0, 0, 0],
+							"rotation": [-90, 0, 0],
+							"uv": {
+								"up": {"uv": [1, 2], "uv_size": [-1, -1]},
+								"down": {"uv": [1, 2], "uv_size": [-1, -1]}
+							}
+						},
+						{
+							"origin": [-256, 0, -264],
+							"size": [528, 0.25, 528],
+							"pivot": [0, 0, 0],
+							"rotation": [0, 0, 90],
+							"uv": {
+								"up": {"uv": [1, 2], "uv_size": [-1, -1]},
+								"down": {"uv": [1, 2], "uv_size": [-1, -1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "spawner1_3",
+					"parent": "spawner1_0",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-264, -176, -264],
+							"size": [528, 336, 528],
+							"uv": {
+								"north": {"uv": [0, 2], "uv_size": [1, 1]},
+								"east": {"uv": [0, 2], "uv_size": [1, 1]},
+								"south": {"uv": [0, 2], "uv_size": [1, 1]},
+								"west": {"uv": [0, 2], "uv_size": [1, 1]},
+								"up": {"uv": [1, 3], "uv_size": [-1, -1]},
+								"down": {"uv": [1, 3], "uv_size": [-1, -1]}
+							}
+						},
+						{
+							"origin": [264, 160, 264],
+							"size": [-528, -336, -528],
+							"uv": {
+								"up": {"uv": [0, 3], "uv_size": [1, -1]}
 							}
 						}
 					]

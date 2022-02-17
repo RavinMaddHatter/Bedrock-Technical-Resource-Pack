@@ -1,0 +1,12 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.golem_spawn": {
+      "geometry": "Geometry.golem_spawn",
+      "materials": [ { "*": "Material.beam_additive" } ],
+      "textures": [ "Texture.golem_spawn" ],
+      "ignore_lighting":true,
+      "light_color_multiplier":1.5
+    }
+  }
+}

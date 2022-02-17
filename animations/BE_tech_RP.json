@@ -38,6 +38,11 @@
 				"witch1_0" : { "rotation" : [ 0, "v.chunk_align_pivot", 0 ] },
 				"witch1_1" : { "position" : [  "v.chunk_align_x", 0, "v.chunk_align_z" ] }
 			}
+		},
+		"animation.outpost_spots" : { "loop" : true, "bones" : {
+				"outpost1_0" : { "rotation" : [ 0, "v.chunk_align_pivot", 0  ] },
+				"outpost1_1" : { "position" : [ "v.chunk_align_x", 0, "v.chunk_align_z" ] }
+			}
 		}
 	}
 }
