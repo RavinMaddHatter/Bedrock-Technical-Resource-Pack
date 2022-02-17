@@ -18,8 +18,8 @@
 			}
 		},
 		"animation.guardian_spots": { "loop": true, "bones": {
-				"guardian1_0": { "rotation": [ 0, "v.chunk_align_pivot", 0 ] },
-				"guardian1_1":{ "position":[ "v.chunk_align_x", 0, "v.chunk_align_z" ] }
+				"guardian_base": { "rotation": [ 0, "v.chunk_align_pivot", 0 ] },
+				"guardian1_0":{ "position":[ "v.chunk_align_x", "v.guardian_y_align", "v.chunk_align_z" ] }
 			}
 		},
 		"animation.sim_distance" : { "loop" : true, "bones" : {
