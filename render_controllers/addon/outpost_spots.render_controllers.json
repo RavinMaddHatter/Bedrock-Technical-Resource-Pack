@@ -1,0 +1,22 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.outpost_spots": {
+      "arrays": {
+        "textures": {
+          "Array.base": [
+            "Texture.outpost_spots_west",
+            "Texture.outpost_spots_east",
+            "Texture.outpost_spots_north",
+	    "Texture.outpost_spots_south"
+          ]
+        }	
+      },
+      "geometry": "Geometry.outpost_spots",
+      "materials": [ { "*": "Material.beam_additive" } ],
+      "textures": [ "Array.base[query.cardinal_facing_2d]" ],
+      "ignore_lighting":true,
+      "light_color_multiplier":1.5
+    }
+  }
+}
