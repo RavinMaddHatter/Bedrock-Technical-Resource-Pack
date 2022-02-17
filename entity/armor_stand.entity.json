@@ -63,6 +63,7 @@
         "pre_animation": [
 	  "v.chunk_align_x = ((query.position(0)-(math.floor(query.position(0)/16)*16))*-16)+128;",
 	  "v.chunk_align_y = math.lerp(0, 1, (1.6 - math.mod(query.position(1), 16) - (query.position(1) <= 0 ? 16)) * 16 + (query.vertical_speed * 0.5) + 0.25);",
+	  "v.guardian_y_align = 39*16 - query.position(1)*16;",
 	  "v.chunk_align_z = ((query.position(2)-((math.floor(query.position(2)/16)+1)*16))*16)+128;",
 	  "v.chunk_align_pivot = -query.body_y_rotation;",
 
