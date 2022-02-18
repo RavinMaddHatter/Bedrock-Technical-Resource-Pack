@@ -1,136 +1,177 @@
 {
-  "format_version": "1.10.0",
-  "minecraft:client_entity": {
-    "description": {
-      "identifier": "minecraft:armor_stand",
-      "min_engine_version": "1.8.0",
-      "materials": {
-        "default": "armor_stand",
-	
-	"beam_additive": "entity_beam_additive"
-      },
-      "textures": {
-        "default": "textures/entity/armor_stand",
-	
-        "spawn_distance": "textures/addon/spawn_distance",
-	"sim_distance": "textures/addon/sim_distance",
-	"guardian_spots": "textures/addon/guardian_spots",
-	"density": "textures/addon/density",
-	"egg_aggro": "textures/addon/egg_aggro",
-	"witch_hut": "textures/addon/witch_hut",
-	"torch_light": "textures/addon/torch_light",
-	"buried_treasure": "textures/addon/buried_treasure",
-	"scare_radius": "textures/addon/scare_radius",
-	"spawner_radius": "textures/addon/spawner_radius",
-	"enderman_aggro": "textures/addon/enderman_aggro",
-	"golem_spawn": "textures/addon/golem_spawn",
-	"outpost_spots_west": "textures/addon/outpost/outpost_spots_west",
-	"outpost_spots_east": "textures/addon/outpost/outpost_spots_east",
-	"outpost_spots_north": "textures/addon/outpost/outpost_spots_north",
-	"outpost_spots_south": "textures/addon/outpost/outpost_spots_south"
-      },
-      "animations": {
-        "default_pose": "animation.armor_stand.default_pose",
-        "no_pose": "animation.armor_stand.no_pose",
-        "solemn_pose": "animation.armor_stand.solemn_pose",
-        "athena_pose": "animation.armor_stand.athena_pose",
-        "brandish_pose": "animation.armor_stand.brandish_pose",
-        "honor_pose": "animation.armor_stand.honor_pose",
-        "entertain_pose": "animation.armor_stand.entertain_pose",
-        "salute_pose": "animation.armor_stand.salute_pose",
-        "riposte_pose": "animation.armor_stand.riposte_pose",
-        "zombie_pose": "animation.armor_stand.zombie_pose",
-        "cancan_a_pose": "animation.armor_stand.cancan_a_pose",
-        "cancan_b_pose": "animation.armor_stand.cancan_b_pose",
-        "hero_pose": "animation.armor_stand.hero_pose",
-        "wiggle": "animation.armor_stand.wiggle",
-        "controller.pose": "controller.animation.armor_stand.pose",
-        "controller.wiggling": "controller.animation.armor_stand.wiggle",
-	
-	"spawn_distance": "animation.spawn_distance",
-	"sim_distance": "animation.sim_distance",
-	"guardian_spots": "animation.guardian_spots",
-	"density": "animation.density",
-	"witch_hut": "animation.witch_hut",
-	"buried_treasure": "animation.buried_treasure",
-	"outpost_spots": "animation.outpost_spots"
-      },
-      "scripts": {
-        "initialize": [
-          "variable.armor_stand.pose_index = 0;",
-          "variable.armor_stand.hurt_time = 0;"
-        ],
-        "pre_animation": [
-	  "v.chunk_align_x = ((query.position(0)-(math.floor(query.position(0)/16)*16))*-16)+128;",
-	  "v.chunk_align_y = math.lerp(0, 1, (1.6 - math.mod(query.position(1), 16) - (query.position(1) <= 0 ? 16)) * 16 + (query.vertical_speed * 0.5) + 0.25);",
-	  "v.guardian_y_align = 39*16 - query.position(1)*16;",
-	  "v.chunk_align_z = ((query.position(2)-((math.floor(query.position(2)/16)+1)*16))*16)+128;",
-	  "v.chunk_align_pivot = -query.body_y_rotation;",
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:armor_stand",
+			"min_engine_version": "1.8.0",
+			"materials": {
+				"default": "armor_stand",
 
-	  "v.spawn_show = query.get_equipped_item_name(0) == 'planks';",
-	  "v.sim_show = query.get_equipped_item_name(0) == 'stick';",
-	  "v.density_show = query.get_equipped_item_name(0) == 'chest';",
-	  "v.guardian_show = query.get_equipped_item_name(0) == 'prismarine_shard';",
-	  "v.egg_show = query.get_equipped_item_name(0) == 'turtle_egg' || query.get_equipped_item_name(0) == 'rotten_flesh';",
-	  "v.witch_show = query.get_equipped_item_name(0) == 'spider_eye';",
-	  "v.torch_show = query.get_equipped_item_name(0) == 'torch';",
-	  "v.treasure_show = query.get_equipped_item_name(0) == 'filled_map' ;",
-	  "v.scare_show = query.get_equipped_item_name(0) == 'gunpowder';",
-	  "v.spawner_show = query.get_equipped_item_name(0) == 'string';",
-	  "v.enderman_show = query.get_equipped_item_name(0) == 'ender_pearl';",
-	  "v.golem_show = query.get_equipped_item_name(0) == 'iron_ingot' || query.get_equipped_item_name(0) == 'red_flower';",
-	  "v.outpost_show = query.get_equipped_item_name(0) == 'banner';"
-        ],
-        "animate": [
-          "controller.pose",
-          "controller.wiggling",
-	  
-          {"spawn_distance": "v.spawn_show"},
-	  {"sim_distance": "v.sim_show"},
-	  {"guardian_spots": "v.guardian_show"},
-	  {"density": "v.density_show"},
-	  {"witch_hut": "v.witch_show"},
-	  {"buried_treasure": "v.treasure_show"},
-	  {"outpost_spots": "v.outpost_show"},
-	  "scale" //structura
-        ]
-      },
-      "geometry": {
-	"default": "geometry.armor_stand.larger_render",
-	
-        "spawn_distance": "geometry.spawn_distance",
-        "sim_distance": "geometry.sim_distance",
-	"guardian_spots": "geometry.guardian_spots",
-	"density": "geometry.density",
-	"egg_aggro": "geometry.egg_aggro",
-	"witch_hut": "geometry.witch_hut",
-	"torch_light": "geometry.torch_light",
-	"buried_treasure": "geometry.buried_treasure",
-	"scare_radius": "geometry.scare_radius",
-	"spawner_radius": "geometry.spawner_radius",
-	"enderman_aggro": "geometry.enderman_aggro",
-	"golem_spawn": "geometry.golem_spawn",
-	"outpost_spots": "geometry.outpost_spots"
-      },
-      "render_controllers": [
-        "controller.render.armor_stand",
-	
-	{ "controller.render.spawn_distance": "v.spawn_show" },
-	{ "controller.render.sim_distance": "v.sim_show" },
-	{ "controller.render.density": "v.density_show" },
-	{"controller.render.guardian_spots": "v.guardian_show"},
-	{"controller.render.egg_aggro": "v.egg_show"},
-	{"controller.render.witch_hut": "v.witch_show"},
-	{"controller.render.torch_light": "v.torch_show"},
-	{"controller.render.buried_treasure": "v.treasure_show"},
-	{"controller.render.scare_radius": "v.scare_show"},
-	{"controller.render.spawner_radius": "v.spawner_show"},
-	{"controller.render.enderman_aggro": "v.enderman_show"},
-	{"controller.render.golem_spawn": "v.golem_show"},
-	{"controller.render.outpost_spots": "v.outpost_show"},
-	"controller.render.armor_stand.ghost_blocks" //structura
-      ],
-      "enable_attachables": true
-    }
-  }
+				"beam_additive": "entity_beam_additive"
+			},
+			"textures": {
+				"default": "textures/entity/armor_stand",
+
+				"spawn_distance": "textures/addon/spawn_distance",
+				"sim_distance": "textures/addon/sim_distance",
+				"guardian_spots": "textures/addon/guardian_spots",
+				"density": "textures/addon/density",
+				"egg_aggro": "textures/addon/egg_aggro",
+				"witch_hut": "textures/addon/witch_hut",
+				"torch_light": "textures/addon/torch_light",
+				"buried_treasure": "textures/addon/buried_treasure",
+				"scare_radius": "textures/addon/scare_radius",
+				"spawner_radius": "textures/addon/spawner_radius",
+				"enderman_aggro": "textures/addon/enderman_aggro",
+				"golem_spawn": "textures/addon/golem_spawn",
+				"outpost_spots_west": "textures/addon/outpost/outpost_spots_west",
+				"outpost_spots_east": "textures/addon/outpost/outpost_spots_east",
+				"outpost_spots_north": "textures/addon/outpost/outpost_spots_north",
+				"outpost_spots_south": "textures/addon/outpost/outpost_spots_south",
+				"sugarcane": "textures/addon/sugarcane"
+			},
+			"animations": {
+				"default_pose": "animation.armor_stand.default_pose",
+				"no_pose": "animation.armor_stand.no_pose",
+				"solemn_pose": "animation.armor_stand.solemn_pose",
+				"athena_pose": "animation.armor_stand.athena_pose",
+				"brandish_pose": "animation.armor_stand.brandish_pose",
+				"honor_pose": "animation.armor_stand.honor_pose",
+				"entertain_pose": "animation.armor_stand.entertain_pose",
+				"salute_pose": "animation.armor_stand.salute_pose",
+				"riposte_pose": "animation.armor_stand.riposte_pose",
+				"zombie_pose": "animation.armor_stand.zombie_pose",
+				"cancan_a_pose": "animation.armor_stand.cancan_a_pose",
+				"cancan_b_pose": "animation.armor_stand.cancan_b_pose",
+				"hero_pose": "animation.armor_stand.hero_pose",
+				"wiggle": "animation.armor_stand.wiggle",
+				"controller.pose": "controller.animation.armor_stand.pose",
+				"controller.wiggling": "controller.animation.armor_stand.wiggle",
+				"spawn_distance": "animation.spawn_distance",
+				"sim_distance": "animation.sim_distance",
+				"guardian_spots": "animation.guardian_spots",
+				"density": "animation.density",
+				"witch_hut": "animation.witch_hut",
+				"buried_treasure": "animation.buried_treasure",
+				"outpost_spots": "animation.outpost_spots"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.armor_stand.pose_index = 0;",
+					"variable.armor_stand.hurt_time = 0;"
+				],
+				"pre_animation": [
+					"v.chunk_align_x = ((query.position(0)-(math.floor(query.position(0)/16)*16))*-16)+128;",
+					"v.chunk_align_y = math.lerp(0, 1, (1.6 - math.mod(query.position(1), 16) - (query.position(1) <= 0 ? 16)) * 16 + (query.vertical_speed * 0.5) + 0.25);",
+					"v.guardian_y_align = 39*16 - query.position(1)*16;",
+					"v.chunk_align_z = ((query.position(2)-((math.floor(query.position(2)/16)+1)*16))*16)+128;",
+					"v.chunk_align_pivot = -query.body_y_rotation;",
+					"v.spawn_show = query.get_equipped_item_name(0) == 'planks';",
+					"v.sim_show = query.get_equipped_item_name(0) == 'stick';",
+					"v.density_show = query.get_equipped_item_name(0) == 'chest';",
+					"v.guardian_show = query.get_equipped_item_name(0) == 'prismarine_shard';",
+					"v.egg_show = query.get_equipped_item_name(0) == 'turtle_egg' || query.get_equipped_item_name(0) == 'rotten_flesh';",
+					"v.witch_show = query.get_equipped_item_name(0) == 'spider_eye';",
+					"v.torch_show = query.get_equipped_item_name(0) == 'torch';",
+					"v.treasure_show = query.get_equipped_item_name(0) == 'filled_map' ;",
+					"v.scare_show = query.get_equipped_item_name(0) == 'gunpowder';",
+					"v.spawner_show = query.get_equipped_item_name(0) == 'string';",
+					"v.enderman_show = query.get_equipped_item_name(0) == 'ender_pearl';",
+					"v.golem_show = query.get_equipped_item_name(0) == 'iron_ingot' || query.get_equipped_item_name(0) == 'red_flower';",
+					"v.outpost_show = query.get_equipped_item_name(0) == 'banner';",
+					"v.sugarcane_show = query.get_equipped_item_name(0) == 'sugar_cane';"
+				],
+				"animate": [
+					"controller.pose",
+					"controller.wiggling",
+					{
+						"spawn_distance": "v.spawn_show"
+					},
+					{
+						"sim_distance": "v.sim_show"
+					},
+					{
+						"guardian_spots": "v.guardian_show"
+					},
+					{
+						"density": "v.density_show"
+					},
+					{
+						"witch_hut": "v.witch_show"
+					},
+					{
+						"buried_treasure": "v.treasure_show"
+					},
+					{
+						"outpost_spots": "v.outpost_show"
+					},
+					"scale"
+				]
+			},
+			"geometry": {
+				"default": "geometry.armor_stand.larger_render",
+				"spawn_distance": "geometry.spawn_distance",
+				"sim_distance": "geometry.sim_distance",
+				"guardian_spots": "geometry.guardian_spots",
+				"density": "geometry.density",
+				"egg_aggro": "geometry.egg_aggro",
+				"witch_hut": "geometry.witch_hut",
+				"torch_light": "geometry.torch_light",
+				"buried_treasure": "geometry.buried_treasure",
+				"scare_radius": "geometry.scare_radius",
+				"spawner_radius": "geometry.spawner_radius",
+				"enderman_aggro": "geometry.enderman_aggro",
+				"golem_spawn": "geometry.golem_spawn",
+				"outpost_spots": "geometry.outpost_spots",
+				"sugarcane": "geometry.sugarcane"
+			},
+			"render_controllers": [
+				"controller.render.armor_stand",
+				{
+					"controller.render.spawn_distance": "v.spawn_show"
+				},
+				{
+					"controller.render.sim_distance": "v.sim_show"
+				},
+				{
+					"controller.render.density": "v.density_show"
+				},
+				{
+					"controller.render.guardian_spots": "v.guardian_show"
+				},
+				{
+					"controller.render.egg_aggro": "v.egg_show"
+				},
+				{
+					"controller.render.witch_hut": "v.witch_show"
+				},
+				{
+					"controller.render.torch_light": "v.torch_show"
+				},
+				{
+					"controller.render.buried_treasure": "v.treasure_show"
+				},
+				{
+					"controller.render.scare_radius": "v.scare_show"
+				},
+				{
+					"controller.render.spawner_radius": "v.spawner_show"
+				},
+				{
+					"controller.render.enderman_aggro": "v.enderman_show"
+				},
+				{
+					"controller.render.golem_spawn": "v.golem_show"
+				},
+				{
+					"controller.render.outpost_spots": "v.outpost_show"
+				},
+				{
+					"controller.render.sugarcane": "v.sugarcane_show"
+				},
+				"controller.render.armor_stand.ghost_blocks"
+			],
+			"enable_attachables": true
+		}
+	}
 }
