@@ -27,7 +27,9 @@
 	"outpost_spots_west": "textures/addon/outpost/outpost_spots_west",
 	"outpost_spots_east": "textures/addon/outpost/outpost_spots_east",
 	"outpost_spots_north": "textures/addon/outpost/outpost_spots_north",
-	"outpost_spots_south": "textures/addon/outpost/outpost_spots_south"
+	"outpost_spots_south": "textures/addon/outpost/outpost_spots_south",
+	"pillager_target": "textures/addon/pillager_target",
+	"sugarcane": "textures/addon/sugarcane"
       },
       "animations": {
         "default_pose": "animation.armor_stand.default_pose",
@@ -78,7 +80,9 @@
 	  "v.spawner_show = query.get_equipped_item_name(0) == 'string';",
 	  "v.enderman_show = query.get_equipped_item_name(0) == 'ender_pearl';",
 	  "v.golem_show = query.get_equipped_item_name(0) == 'iron_ingot' || query.get_equipped_item_name(0) == 'red_flower';",
-	  "v.outpost_show = query.get_equipped_item_name(0) == 'banner';"
+	  "v.outpost_show = query.get_equipped_item_name(0) == 'banner';",
+	  "v.pillager_show = query.get_equipped_item_name(0) == 'crossbow';",
+	  "v.sugarcane_show = query.get_equipped_item_name(0) == 'sugar_cane';"
         ],
         "animate": [
           "controller.pose",
@@ -109,7 +113,9 @@
 	"spawner_radius": "geometry.spawner_radius",
 	"enderman_aggro": "geometry.enderman_aggro",
 	"golem_spawn": "geometry.golem_spawn",
-	"outpost_spots": "geometry.outpost_spots"
+	"outpost_spots": "geometry.outpost_spots",
+	"pillager_target": "geometry.pillager_target",
+	"sugarcane": "geometry.sugarcane"
       },
       "render_controllers": [
         "controller.render.armor_stand",
@@ -127,6 +133,8 @@
 	{"controller.render.enderman_aggro": "v.enderman_show"},
 	{"controller.render.golem_spawn": "v.golem_show"},
 	{"controller.render.outpost_spots": "v.outpost_show"},
+	{"controller.render.pillager_target": "v.pillager_show"},
+	{"controller.render.sugarcane": "v.sugarcane_show"},
 	"controller.render.armor_stand.ghost_blocks" //structura
       ],
       "enable_attachables": true
