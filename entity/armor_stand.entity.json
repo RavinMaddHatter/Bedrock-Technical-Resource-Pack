@@ -7,7 +7,7 @@
       "materials": {
         "default": "armor_stand",
 	
-	"beam_additive": "entity_beam_additive"
+	"be_tech_rp": "be_tech_rp"
       },
       "textures": {
         "default": "textures/entity/armor_stand",
@@ -29,7 +29,8 @@
 	"outpost_spots_north": "textures/addon/outpost/outpost_spots_north",
 	"outpost_spots_south": "textures/addon/outpost/outpost_spots_south",
 	"pillager_target": "textures/addon/pillager_target",
-	"sugarcane": "textures/addon/sugarcane"
+	"sugarcane": "textures/addon/sugarcane",
+	"crop_water": "textures/addon/crop_water"
       },
       "animations": {
         "default_pose": "animation.armor_stand.default_pose",
@@ -82,7 +83,8 @@
 	  "v.golem_show = query.get_equipped_item_name(0) == 'iron_ingot' || query.get_equipped_item_name(0) == 'red_flower';",
 	  "v.outpost_show = query.get_equipped_item_name(0) == 'banner';",
 	  "v.pillager_show = query.get_equipped_item_name(0) == 'crossbow';",
-	  "v.sugarcane_show = query.get_equipped_item_name(0) == 'sugar_cane';"
+	  "v.sugarcane_show = query.get_equipped_item_name(0) == 'sugar_cane';",
+	  "v.crop_show = query.get_equipped_item_name(0) == 'wheat_seeds';"
         ],
         "animate": [
           "controller.pose",
@@ -115,7 +117,8 @@
 	"golem_spawn": "geometry.golem_spawn",
 	"outpost_spots": "geometry.outpost_spots",
 	"pillager_target": "geometry.pillager_target",
-	"sugarcane": "geometry.sugarcane"
+	"sugarcane": "geometry.sugarcane",
+	"crop_water": "geometry.crop_water"
       },
       "render_controllers": [
         "controller.render.armor_stand",
@@ -135,6 +138,7 @@
 	{"controller.render.outpost_spots": "v.outpost_show"},
 	{"controller.render.pillager_target": "v.pillager_show"},
 	{"controller.render.sugarcane": "v.sugarcane_show"},
+	{"controller.render.crop_water": "v.crop_show"},
 	"controller.render.armor_stand.ghost_blocks" //structura
       ],
       "enable_attachables": true

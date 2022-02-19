@@ -3,7 +3,7 @@
   "render_controllers": {
     "controller.render.witch_hut": {
       "geometry": "Geometry.witch_hut",
-      "materials": [ { "*": "Material.beam_additive" } ],
+      "materials": [ { "*": "Material.be_tech_rp" } ],
       "textures": [ "Texture.witch_hut" ],
       "ignore_lighting":true,
       "light_color_multiplier":1.5

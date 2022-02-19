@@ -13,7 +13,7 @@
         }	
       },
       "geometry": "Geometry.outpost_spots",
-      "materials": [ { "*": "Material.beam_additive" } ],
+      "materials": [ { "*": "Material.be_tech_rp" } ],
       "textures": [ "Array.base[query.cardinal_facing_2d]" ],
       "ignore_lighting":true,
       "light_color_multiplier":1.5
