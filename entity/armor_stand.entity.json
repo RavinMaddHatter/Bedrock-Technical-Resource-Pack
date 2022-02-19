@@ -28,7 +28,8 @@
 				"outpost_spots_east": "textures/addon/outpost/outpost_spots_east",
 				"outpost_spots_north": "textures/addon/outpost/outpost_spots_north",
 				"outpost_spots_south": "textures/addon/outpost/outpost_spots_south",
-				"sugarcane": "textures/addon/sugarcane"
+				"sugarcane": "textures/addon/sugarcane",
+				"spider_blocking": "textures/addon/spider_blocking"
 			},
 			"animations": {
 				"default_pose": "animation.armor_stand.default_pose",
@@ -75,11 +76,12 @@
 					"v.torch_show = query.get_equipped_item_name(0) == 'torch';",
 					"v.treasure_show = query.get_equipped_item_name(0) == 'filled_map' ;",
 					"v.scare_show = query.get_equipped_item_name(0) == 'gunpowder';",
-					"v.spawner_show = query.get_equipped_item_name(0) == 'string';",
+					"v.spawner_show = query.get_equipped_item_name(0) == 'bone';",
 					"v.enderman_show = query.get_equipped_item_name(0) == 'ender_pearl';",
 					"v.golem_show = query.get_equipped_item_name(0) == 'iron_ingot' || query.get_equipped_item_name(0) == 'red_flower';",
 					"v.outpost_show = query.get_equipped_item_name(0) == 'banner';",
-					"v.sugarcane_show = query.get_equipped_item_name(0) == 'sugar_cane';"
+					"v.sugarcane_show = query.get_equipped_item_name(0) == 'sugar_cane';",
+					"v.spider_blocking = query.get_equipped_item_name(0) == 'string';"
 				],
 				"animate": [
 					"controller.pose",
@@ -123,7 +125,8 @@
 				"enderman_aggro": "geometry.enderman_aggro",
 				"golem_spawn": "geometry.golem_spawn",
 				"outpost_spots": "geometry.outpost_spots",
-				"sugarcane": "geometry.sugarcane"
+				"sugarcane": "geometry.sugarcane",
+				"spider_blocking": "geometry.spider_blocking"
 			},
 			"render_controllers": [
 				"controller.render.armor_stand",
@@ -169,6 +172,10 @@
 				{
 					"controller.render.sugarcane": "v.sugarcane_show"
 				},
+				{
+					"controller.render.spider_blocking": "v.spider_blocking"
+				},
+				
 				"controller.render.armor_stand.ghost_blocks"
 			],
 			"enable_attachables": true
