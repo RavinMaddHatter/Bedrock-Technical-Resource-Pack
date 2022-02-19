@@ -3,7 +3,7 @@
   "render_controllers": {
     "controller.render.spawner_radius": {
       "geometry": "Geometry.spawner_radius",
-      "materials": [ { "*": "Material.beam_additive" } ],
+      "materials": [ { "*": "Material.be_tech_rp" } ],
       "textures": [ "Texture.spawner_radius" ],
       "ignore_lighting":true,
       "light_color_multiplier":1.5
