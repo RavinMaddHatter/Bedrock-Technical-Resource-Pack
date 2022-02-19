@@ -13,7 +13,6 @@
         "default": "textures/entity/armor_stand",
 	
         "spawn_distance": "textures/addon/spawn_distance",
-
 	"sim_distance": "textures/addon/sim_distance",
 	"guardian_spots": "textures/addon/guardian_spots",
 	"density": "textures/addon/density",
@@ -75,7 +74,7 @@
 	  "v.density_show = query.get_equipped_item_name(0) == 'chest';",
 	  "v.guardian_show = query.get_equipped_item_name(0) == 'prismarine_shard';",
 	  "v.egg_show = query.get_equipped_item_name(0) == 'turtle_egg' || query.get_equipped_item_name(0) == 'rotten_flesh';",
-	  "v.witch_show = query.get_equipped_item_name(0) == 'spider_eye';",
+	  "v.witch_show = query.get_equipped_item_name(0) == 'sugar';",
 	  "v.torch_show = query.get_equipped_item_name(0) == 'torch';",
 	  "v.treasure_show = query.get_equipped_item_name(0) == 'filled_map' ;",
 	  "v.scare_show = query.get_equipped_item_name(0) == 'gunpowder';",
@@ -85,7 +84,7 @@
 	  "v.outpost_show = query.get_equipped_item_name(0) == 'banner';",
 	  "v.pillager_show = query.get_equipped_item_name(0) == 'crossbow';",
 	  "v.sugarcane_show = query.get_equipped_item_name(0) == 'sugar_cane';",
-    "v.spider_blocking = query.get_equipped_item_name(0) == 'string';",
+	  "v.spider_show = query.get_equipped_item_name(0) == 'spider_eye';",
 	  "v.crop_show = query.get_equipped_item_name(0) == 'wheat_seeds';"
         ],
         "animate": [
@@ -103,7 +102,7 @@
         ]
       },
       "geometry": {
-	      "default": "geometry.armor_stand.larger_render",
+        "default": "geometry.armor_stand.larger_render",
         "spawn_distance": "geometry.spawn_distance",
         "sim_distance": "geometry.sim_distance",
 
@@ -121,7 +120,7 @@
 	"pillager_target": "geometry.pillager_target",
 	"sugarcane": "geometry.sugarcane",
 	"crop_water": "geometry.crop_water",
-				"spider_blocking": "geometry.spider_blocking"
+	"spider_blocking": "geometry.spider_blocking"
       },
       "render_controllers": [
         "controller.render.armor_stand",
@@ -142,8 +141,7 @@
 	{"controller.render.pillager_target": "v.pillager_show"},
 	{"controller.render.sugarcane": "v.sugarcane_show"},
 	{"controller.render.crop_water": "v.crop_show"},
-
-        {"controller.render.spider_blocking": "v.spider_blocking"},
+        {"controller.render.spider_blocking": "v.spider_show"},
 	"controller.render.armor_stand.ghost_blocks" //structura
       ],
       "enable_attachables": true

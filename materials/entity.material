@@ -3,12 +3,12 @@
     "version": "1.0.0",
 
     "be_tech_rp:entity_alphablend": { //base from vanilla "entity_beam_additive"
-      "+defines": [ "COLOR_BASED"], //"NO_TEXTURE" ], //"NO_TEXTURE" does not work on mobile
-      "-defines": [ "USE_OVERLAY" ], //works on mobile
-      "+states": [ "Blending", "DisableDepthWrite" ], //works on mobile
+      "+defines": [ "COLOR_BASED"], //default = [ "COLOR_BASED", "NO_TEXTURE" ]. **NO_TEXTURE does not work on mobile**
+      "-defines": [ "USE_OVERLAY" ],
+      "+states": [ "Blending", "DisableDepthWrite" ],
 
-      "blendSrc": "SourceAlpha", //works on mobile
-      "blendDst": "One" //works on mobile
+      "blendSrc": "SourceAlpha",
+      "blendDst": "One"
     }
   }
 }
