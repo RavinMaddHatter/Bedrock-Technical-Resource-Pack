@@ -5,13 +5,9 @@
       "identifier": "minecraft:armor_stand",
       "min_engine_version": "1.8.0",
       "materials": {
-        "default": "armor_stand",
-	
 	"be_tech_rp": "be_tech_rp"
       },
       "textures": {
-        "default": "textures/entity/armor_stand",
-	
         "spawn_distance": "textures/addon/spawn_distance",
 	"sim_distance": "textures/addon/sim_distance",
 	"guardian_spots": "textures/addon/guardian_spots",
@@ -33,24 +29,7 @@
 	"crop_water": "textures/addon/crop_water",
         "spider_blocking": "textures/addon/spider_blocking"
       },
-      "animations": {
-        "default_pose": "animation.armor_stand.default_pose",
-        "no_pose": "animation.armor_stand.no_pose",
-        "solemn_pose": "animation.armor_stand.solemn_pose",
-        "athena_pose": "animation.armor_stand.athena_pose",
-        "brandish_pose": "animation.armor_stand.brandish_pose",
-        "honor_pose": "animation.armor_stand.honor_pose",
-        "entertain_pose": "animation.armor_stand.entertain_pose",
-        "salute_pose": "animation.armor_stand.salute_pose",
-        "riposte_pose": "animation.armor_stand.riposte_pose",
-        "zombie_pose": "animation.armor_stand.zombie_pose",
-        "cancan_a_pose": "animation.armor_stand.cancan_a_pose",
-        "cancan_b_pose": "animation.armor_stand.cancan_b_pose",
-        "hero_pose": "animation.armor_stand.hero_pose",
-        "wiggle": "animation.armor_stand.wiggle",
-        "controller.pose": "controller.animation.armor_stand.pose",
-        "controller.wiggling": "controller.animation.armor_stand.wiggle",
-	
+      "animations": {	
 	"spawn_distance": "animation.spawn_distance",
 	"sim_distance": "animation.sim_distance",
 	"guardian_spots": "animation.guardian_spots",
@@ -60,10 +39,6 @@
 	"outpost_spots": "animation.outpost_spots"
       },
       "scripts": {
-        "initialize": [
-          "variable.armor_stand.pose_index = 0;",
-          "variable.armor_stand.hurt_time = 0;"
-        ],
         "pre_animation": [
 	  "v.chunk_align_x = ((query.position(0)-(math.floor(query.position(0)/16)*16))*-16)+128;",
 	  "v.chunk_align_y = math.lerp(0, 1, (1.6 - math.mod(query.position(1), 16) - (query.position(1) <= 0 ? 16)) * 16 + (query.vertical_speed * 0.5) + 0.25);",
@@ -88,8 +63,8 @@
 	  "v.crop_show = query.get_equipped_item_name(0) == 'wheat_seeds';"
         ],
         "animate": [
-          "controller.pose",
-          "controller.wiggling",
+          "controller.pose", //vanilla
+          "controller.wiggling", //vanilla
 	  
           {"spawn_distance": "v.spawn_show"},
 	  {"sim_distance": "v.sim_show"},
@@ -105,7 +80,6 @@
         "default": "geometry.armor_stand.larger_render",
         "spawn_distance": "geometry.spawn_distance",
         "sim_distance": "geometry.sim_distance",
-
 	"guardian_spots": "geometry.guardian_spots",
 	"density": "geometry.density",
 	"egg_aggro": "geometry.egg_aggro",
@@ -123,7 +97,7 @@
 	"spider_blocking": "geometry.spider_blocking"
       },
       "render_controllers": [
-        "controller.render.armor_stand",
+        "controller.render.armor_stand", //vanilla
 	
 	{ "controller.render.spawn_distance": "v.spawn_show" },
 	{ "controller.render.sim_distance": "v.sim_show" },
@@ -143,8 +117,7 @@
 	{"controller.render.crop_water": "v.crop_show"},
         {"controller.render.spider_blocking": "v.spider_show"},
 	"controller.render.armor_stand.ghost_blocks" //structura
-      ],
-      "enable_attachables": true
+      ]
     }
   }
 
