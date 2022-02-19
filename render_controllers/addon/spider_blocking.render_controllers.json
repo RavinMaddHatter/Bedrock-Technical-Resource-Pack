@@ -3,7 +3,7 @@
   "render_controllers": {
     "controller.render.spider_blocking": {
       "geometry": "Geometry.spider_blocking",
-      "materials": [ { "*": "Material.beam_additive" } ],
+      "materials": [ { "*": "Material.be_tech_rp" } ],
       "textures": [ "Texture.spider_blocking" ],
       "ignore_lighting":true,
       "light_color_multiplier":1.5
