@@ -60,7 +60,7 @@
 	  "v.pillager_show = query.get_equipped_item_name(0) == 'crossbow';",
 	  "v.sugarcane_show = query.get_equipped_item_name(0) == 'sugar_cane';",
 	  "v.spider_show = query.get_equipped_item_name(0) == 'spider_eye';",
-	  "v.crop_show = query.get_equipped_item_name(0) == 'wheat_seeds';"
+	  "v.crop_show = query.get_equipped_item_name(0) == 'water_bucket' || query.get_equipped_item_name(0) == 'wheat_seeds';"
         ],
         "animate": [
           "controller.pose", //vanilla
