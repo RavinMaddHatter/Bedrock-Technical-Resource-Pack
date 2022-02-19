@@ -13,6 +13,7 @@
         "default": "textures/entity/armor_stand",
 	
         "spawn_distance": "textures/addon/spawn_distance",
+
 	"sim_distance": "textures/addon/sim_distance",
 	"guardian_spots": "textures/addon/guardian_spots",
 	"density": "textures/addon/density",
@@ -30,7 +31,8 @@
 	"outpost_spots_south": "textures/addon/outpost/outpost_spots_south",
 	"pillager_target": "textures/addon/pillager_target",
 	"sugarcane": "textures/addon/sugarcane",
-	"crop_water": "textures/addon/crop_water"
+	"crop_water": "textures/addon/crop_water",
+        "spider_blocking": "textures/addon/spider_blocking"
       },
       "animations": {
         "default_pose": "animation.armor_stand.default_pose",
@@ -68,7 +70,6 @@
 	  "v.chunk_align_y = math.lerp(0, 1, (1.6 - math.mod(query.position(1), 16) - (query.position(1) <= 0 ? 16)) * 16 + (query.vertical_speed * 0.5) + 0.25);",
 	  "v.chunk_align_z = ((query.position(2)-((math.floor(query.position(2)/16)+1)*16))*16)+128;",
 	  "v.chunk_align_pivot = -query.body_y_rotation;",
-
 	  "v.spawn_show = query.get_equipped_item_name(0) == 'planks';",
 	  "v.sim_show = query.get_equipped_item_name(0) == 'stick';",
 	  "v.density_show = query.get_equipped_item_name(0) == 'chest';",
@@ -84,6 +85,7 @@
 	  "v.outpost_show = query.get_equipped_item_name(0) == 'banner';",
 	  "v.pillager_show = query.get_equipped_item_name(0) == 'crossbow';",
 	  "v.sugarcane_show = query.get_equipped_item_name(0) == 'sugar_cane';",
+    "v.spider_blocking = query.get_equipped_item_name(0) == 'string';",
 	  "v.crop_show = query.get_equipped_item_name(0) == 'wheat_seeds';"
         ],
         "animate": [
@@ -101,10 +103,10 @@
         ]
       },
       "geometry": {
-	"default": "geometry.armor_stand.larger_render",
-	
+	      "default": "geometry.armor_stand.larger_render",
         "spawn_distance": "geometry.spawn_distance",
         "sim_distance": "geometry.sim_distance",
+
 	"guardian_spots": "geometry.guardian_spots",
 	"density": "geometry.density",
 	"egg_aggro": "geometry.egg_aggro",
@@ -118,7 +120,8 @@
 	"outpost_spots": "geometry.outpost_spots",
 	"pillager_target": "geometry.pillager_target",
 	"sugarcane": "geometry.sugarcane",
-	"crop_water": "geometry.crop_water"
+	"crop_water": "geometry.crop_water",
+				"spider_blocking": "geometry.spider_blocking"
       },
       "render_controllers": [
         "controller.render.armor_stand",
@@ -139,9 +142,12 @@
 	{"controller.render.pillager_target": "v.pillager_show"},
 	{"controller.render.sugarcane": "v.sugarcane_show"},
 	{"controller.render.crop_water": "v.crop_show"},
+
+        {"controller.render.spider_blocking": "v.spider_blocking"},
 	"controller.render.armor_stand.ghost_blocks" //structura
       ],
       "enable_attachables": true
     }
   }
+
 }
