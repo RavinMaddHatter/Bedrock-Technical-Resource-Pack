@@ -9,7 +9,7 @@
         "animated": "player_animated",
 	
 	"chunk": "entity_emissive_alpha",
-	"slime": "entity_beam_additive"
+	"slime": "be_tech_rp"
       },
       "textures": {
         "default": "textures/entity/steve",

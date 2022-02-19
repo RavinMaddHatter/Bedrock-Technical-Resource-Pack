@@ -3,7 +3,7 @@
   "render_controllers": {
     "controller.render.egg_aggro": {
       "geometry": "Geometry.egg_aggro",
-      "materials": [ { "*": "Material.beam_additive" } ],
+      "materials": [ { "*": "Material.be_tech_rp" } ],
       "textures": [ "Texture.egg_aggro" ],
       "ignore_lighting":true,
       "light_color_multiplier":1.5

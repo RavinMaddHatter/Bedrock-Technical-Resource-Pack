@@ -1,10 +1,10 @@
 {
   "format_version": "1.8.0",
   "render_controllers": {
-    "controller.render.sugarcane": {
-      "geometry": "Geometry.sugarcane",
+    "controller.render.crop_water": {
+      "geometry": "Geometry.crop_water",
       "materials": [ { "*": "Material.be_tech_rp" } ],
-      "textures": [ "Texture.sugarcane" ],
+      "textures": [ "Texture.crop_water" ],
       "ignore_lighting":true,
       "light_color_multiplier":1.5
     }
