@@ -5,7 +5,7 @@
 			"description": {
 				"identifier": "geometry.enderman_aggro",
 				"texture_width": 1,
-				"texture_height": 2,
+				"texture_height": 3,
 				"visible_bounds_width": 401,
 				"visible_bounds_height": 89,
 				"visible_bounds_offset": [0, 0.5, 0]
@@ -43,7 +43,12 @@
 							"origin": [512, 256, 512],
 							"size": [-1024, -512, -1024],
 							"uv": {
-								"up": {"uv": [0, 2], "uv_size": [1, -1]}
+								"north": {"uv": [0, 3], "uv_size": [1, -1]},
+								"east": {"uv": [0, 3], "uv_size": [1, -1]},
+								"south": {"uv": [0, 3], "uv_size": [1, -1]},
+								"west": {"uv": [0, 3], "uv_size": [1, -1]},
+								"up": {"uv": [0, 2], "uv_size": [1, -1]},
+								"down": {"uv": [0, 3], "uv_size": [1, -1]}
 							}
 						}
 					]
