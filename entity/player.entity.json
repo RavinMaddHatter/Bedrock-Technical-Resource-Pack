@@ -4,16 +4,11 @@
     "description": {
       "identifier": "minecraft:player",
       "materials": {
-		"default": "entity_alphatest",
-		"chunk": "entity_emissive_alpha",
-		"map": "entity_beam_additive",
-		"slime": "be_tech_rp",
-		"animated": "player_animated"
+	"chunk": "entity_emissive_alpha",
+	"slime": "be_tech_rp"
       },
       "textures": {	
-        "chunk": "textures/addon/chunk",//vanilla
-		"default": "textures/entity/steve",//vanilla
-		"cape": "textures/entity/cape_invisible",//vanilla
+        "chunk": "textures/addon/chunk",
         "slime1": "textures/addon/slime/(1) -640,-640 to -384,-384",
         "slime2": "textures/addon/slime/(2) -640,-384 to -384,-128",
         "slime3": "textures/addon/slime/(3) -640,-128 to -384,128",
@@ -41,8 +36,6 @@
         "slime25": "textures/addon/slime/(25) 384,384 to 640,640"
       },
       "geometry": {
-		"default": "geometry.humanoid.custom",//vanilla
-		"cape": "geometry.cape",//vanilla
         "chunk": "geometry.chunk",
         "slime1": "geometry.slime1",
         "slime2": "geometry.slime2",
@@ -71,12 +64,6 @@
         "slime25": "geometry.slime25"
       },
       "scripts": {
-		"initialize": [
-					"variable.is_holding_right = 0.0;",//vanilla
-					"variable.is_blinking = 0.0;",//vanilla
-					"variable.last_blink_time = 0.0;",//vanilla
-					"variable.hand_bob = 0.0;"//vanilla
-				],
         "pre_animation": [
           "variable.helmet_layer_visible = 1.0;", //vanilla
           "variable.leg_layer_visible = 1.0;", //vanilla
@@ -89,76 +76,23 @@
           "variable.map_angle = math.clamp(1 - variable.player_x_rotation / 45.1, 0.0, 1.0);", //vanilla
           "variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;", //vanilla
 	  
-		  "v.chunk_align_x = ((query.position(0)-(math.floor(query.position(0)/16)*16))*-16)+128;",
-		  "v.chunk_align_y = math.lerp(0, 1, (1.6 - math.mod(query.position(1), 16) - (query.position(1) <= 0 ? 16)) * 16 + (query.vertical_speed * 0.5) + 0.25);",
-		  "v.chunk_align_z = ((query.position(2)-((math.floor(query.position(2)/16)+1)*16))*16)+128;",
-		  "v.chunk_align_pivot = -query.body_y_rotation;",
-		  "v.chunk_align_pivot_fp = variable.is_first_person ? -query.target_x_rotation:-query.body_y_rotation;",
-		  
-		  "v.chunk_show = !variable.map_face_icon && !variable.is_first_person && !query.is_in_ui && !variable.is_paperdoll && (query.get_equipped_item_name(1) == 'firework_rocket' || query.get_equipped_item_name(1) == 'nautilus_shell');",
-		  "v.slime_show = !variable.map_face_icon && !variable.is_first_person && !query.is_in_ui && !variable.is_paperdoll && query.get_equipped_item_name(1) == 'nautilus_shell';"
+	  "v.chunk_align_x = ((query.position(0)-(math.floor(query.position(0)/16)*16))*-16)+128;",
+	  "v.chunk_align_y = math.lerp(0, 1, (1.6 - math.mod(query.position(1), 16) - (query.position(1) <= 0 ? 16)) * 16 + (query.vertical_speed * 0.5) + 0.25);",
+	  "v.chunk_align_z = ((query.position(2)-((math.floor(query.position(2)/16)+1)*16))*16)+128;",
+	  "v.chunk_align_pivot = -query.body_y_rotation;",
+	  "v.chunk_align_pivot_fp = variable.is_first_person ? -query.target_x_rotation:-query.body_y_rotation;",
+	  
+	  "v.chunk_show = !variable.map_face_icon && !variable.is_first_person && !query.is_in_ui && !variable.is_paperdoll && (query.get_equipped_item_name(1) == 'firework_rocket' || query.get_equipped_item_name(1) == 'nautilus_shell');",
+	  "v.slime_show = !variable.map_face_icon && !variable.is_first_person && !query.is_in_ui && !variable.is_paperdoll && query.get_equipped_item_name(1) == 'nautilus_shell';"
         ],
         "animate": [
           "root", //vanilla
-		  "map",//vanilla
 	  
 	  {"chunk": "v.chunk_show"},
 	  {"slime": "v.slime_show"}
         ]
       },
       "animations": {
-	  "map": "animation.map.locate",//vanilla
-	  "root": "controller.animation.player.root",//vanilla
-	  "base_controller": "controller.animation.player.base",//vanilla
-	  "hudplayer": "controller.animation.player.hudplayer",//vanilla
-	  "humanoid_base_pose": "animation.humanoid.base_pose",//vanilla
-	  "look_at_target": "controller.animation.humanoid.look_at_target",//vanilla
-	  "look_at_target_ui": "animation.player.look_at_target.ui",
-	  "look_at_target_default": "animation.humanoid.look_at_target.default",//vanilla
-	  "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",//vanilla
-	  "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",//vanilla
-	  "look_at_target_inverted": "animation.player.look_at_target.inverted",//vanilla
-	  "cape": "animation.player.cape",//vanilla
-	  "move.arms": "animation.player.move.arms",//vanilla
-	  "move.legs": "animation.player.move.legs",//vanilla
-	  "swimming": "animation.player.swim",//vanilla
-	  "swimming.legs": "animation.player.swim.legs",//vanilla
-	  "riding.arms": "animation.player.riding.arms",//vanilla
-	  "riding.legs": "animation.player.riding.legs",//vanilla
-	  "holding": "animation.player.holding",//vanilla
-	  "brandish_spear": "animation.humanoid.brandish_spear",//vanilla
-	  "holding_spyglass": "animation.humanoid.holding_spyglass",	//vanilla
-	  "charging": "animation.humanoid.charging",//vanilla
-	  "attack.positions": "animation.player.attack.positions",//vanilla
-	  "attack.rotations": "animation.player.attack.rotations",//vanilla
-	  "sneaking": "animation.player.sneaking",//vanilla
-	  "bob": "animation.player.bob",//vanilla
-	  "damage_nearby_mobs": "animation.humanoid.damage_nearby_mobs",//vanilla
-	  "fishing_rod": "animation.humanoid.fishing_rod",//vanilla
-	  "use_item_progress": "animation.humanoid.use_item_progress",//vanilla
-	  "skeleton_attack": "animation.skeleton.attack",//vanilla
-	  "sleeping": "animation.player.sleeping",//vanilla
-	  "first_person_base_pose": "animation.player.first_person.base_pose",//vanilla
-	  "first_person_empty_hand": "animation.player.first_person.empty_hand",//vanilla
-	  "first_person_swap_item": "animation.player.first_person.swap_item",//vanilla
-	  "first_person_shield_block": "animation.player.first_person.shield_block", //vanilla
-	  "first_person_attack_controller": "controller.animation.player.first_person_attack",//vanilla
-	  "first_person_attack_rotation": "animation.player.first_person.attack_rotation",//vanilla
-	  "first_person_vr_attack_rotation": "animation.player.first_person.vr_attack_rotation",//vanilla
-	  "first_person_walk": "animation.player.first_person.walk",//vanilla
-	  "first_person_map_controller": "controller.animation.player.first_person_map",//vanilla
-	  "first_person_map_hold": "animation.player.first_person.map_hold",//vanilla
-	  "first_person_map_hold_attack": "animation.player.first_person.map_hold_attack",//vanilla
-	  "first_person_map_hold_off_hand": "animation.player.first_person.map_hold_off_hand",//vanilla
-	  "first_person_map_hold_main_hand": "animation.player.first_person.map_hold_main_hand",//vanilla
-	  "first_person_crossbow_equipped": "animation.player.first_person.crossbow_equipped",//vanilla
-	  "third_person_crossbow_equipped": "animation.player.crossbow_equipped",//vanilla
-	  "third_person_bow_equipped": "animation.player.bow_equipped",//vanilla
-	  "crossbow_hold": "animation.player.crossbow_hold",//vanilla
-	  "crossbow_controller": "controller.animation.player.crossbow",//vanilla
-	  "shield_block_main_hand": "animation.player.shield_block_main_hand",//vanilla
-	  "shield_block_off_hand": "animation.player.shield_block_off_hand",//vanilla
-	  "blink": "controller.animation.persona.blink",
 	"chunk": "animation.chunk",
 	"slime": "animation.slime"
       },
