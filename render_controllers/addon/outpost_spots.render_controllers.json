@@ -15,6 +15,12 @@
       "geometry": "Geometry.outpost_spots",
       "materials": [ { "*": "Material.be_tech_rp" } ],
       "textures": [ "Array.base[query.cardinal_facing_2d]" ],
+      "part_visibility": [
+        { "*": true },
+        { "outpost1_2": "query.cardinal_facing_2d == 2" },
+        { "outpost1_3": "query.cardinal_facing_2d == 2 || query.cardinal_facing_2d == 4" },
+        { "outpost1_5": "query.cardinal_facing_2d == 2 || query.cardinal_facing_2d == 5" }
+      ],
       "ignore_lighting":true,
       "light_color_multiplier":1.5
     }
