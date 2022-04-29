@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Adds json to be a detected language on the GitHub page
+*.json linguist-detectable=true
