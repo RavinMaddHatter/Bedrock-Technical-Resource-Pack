@@ -97,8 +97,10 @@
 	"slime": "animation.slime"
       },
       "render_controllers": [
-        { "controller.render.player.first_person": "variable.is_first_person" }, //vanilla
-        { "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon" }, //vanilla
+        { "controller.render.player.first_person_spectator": "variable.is_first_person && query.is_spectator" }, //vanilla
+        { "controller.render.player.third_person_spectator": "!variable.is_first_person && !variable.map_face_icon && query.is_spectator" }, //vanilla
+        { "controller.render.player.first_person": "variable.is_first_person && !query.is_spectator" }, //vanilla
+        { "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon && !query.is_spectator" }, //vanilla
         { "controller.render.player.map": "variable.map_face_icon" }, //vanilla
 	
         { "controller.render.chunk": "v.chunk_show" },
