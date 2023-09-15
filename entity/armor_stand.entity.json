@@ -58,7 +58,7 @@
 	  "v.spawner_show = query.get_equipped_item_name(0) == 'string';",
 	  "v.enderman_show = query.get_equipped_item_name(0) == 'ender_pearl';",
 	  "v.golem_show = query.get_equipped_item_name(0) == 'iron_ingot' || query.get_equipped_item_name(0) == 'red_flower';",
-	  "v.outpost_show = query.get_equipped_item_name(0) == 'banner';",
+	  "v.outpost_show = query.get_equipped_item_name(0) == 'banner' && variable.armor_stand.pose_index == 0;",
 	  "v.pillager_show = query.get_equipped_item_name(0) == 'crossbow';",
 	  "v.sugarcane_show = query.get_equipped_item_name(0) == 'sugar_cane';",
 	  "v.spider_show = query.get_equipped_item_name(0) == 'spider_eye';",
