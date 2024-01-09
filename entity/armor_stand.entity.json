@@ -46,7 +46,7 @@
 	  "v.chunk_align_pivot = -query.body_y_rotation;",
 	  "v.guardian_y_align = 39*16 - query.position(1)*16;",
 
-	  "v.spawn_show = query.get_equipped_item_name(0) == 'planks';",
+	  "v.spawn_show = query.get_equipped_item_name(0) == 'acacia_planks' || query.get_equipped_item_name(0) == 'bamboo_planks' || query.get_equipped_item_name(0) == 'birch_planks' || query.get_equipped_item_name(0) == 'cherry_planks' || query.get_equipped_item_name(0) == 'crimson_planks' || query.get_equipped_item_name(0) == 'dark_oak_planks' || query.get_equipped_item_name(0) == 'jungle_planks' || query.get_equipped_item_name(0) == 'mangrove_planks' || query.get_equipped_item_name(0) == 'oak_planks' || query.get_equipped_item_name(0) == 'spruce_planks' || query.get_equipped_item_name(0) == 'warped_planks';",
 	  "v.sim_show = query.get_equipped_item_name(0) == 'stick';",
 	  "v.density_show = query.get_equipped_item_name(0) == 'chest';",
 	  "v.guardian_show = query.get_equipped_item_name(0) == 'prismarine_shard';",
