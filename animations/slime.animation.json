@@ -41,7 +41,7 @@
 				"slime3_pitch": {
 					"rotation":	[0, 0, 0]//
 				},
-				"slime3":{
+				"slime_3":{
 					"position":[
 						"(-query.position(0)*16)-131072",
 						"0",
@@ -161,7 +161,7 @@
 				"slime11_pitch": {
 					"rotation":	[0, 0, 0]//
 				},
-				"slime11":{
+				"slime_11":{
 					"position":[
 						"(-query.position(0)*16)",
 						"0",
@@ -281,7 +281,7 @@
 				"slime19_pitch": {
 					"rotation":	[0, 0, 0]//
 				},
-				"slime19":{
+				"slime_19":{
 					"position":[
 						"(-query.position(0)*16)+65536",
 						"0",

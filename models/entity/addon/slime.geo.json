@@ -94,7 +94,7 @@
 				},
 				
 				{
-					"name": "slime3",
+					"name": "slime_3",
 					"parent": "slime3_pitch",
 					"pivot": [0, 0, 0],
 					"cubes":[
@@ -374,7 +374,7 @@
 				},
 				
 				{
-					"name": "slime11",
+					"name": "slime_11",
 					"parent": "slime11_pitch",
 					"pivot": [0, 0, 0],
 					"cubes":[
@@ -654,7 +654,7 @@
 				},
 				
 				{
-					"name": "slime19",
+					"name": "slime_19",
 					"parent": "slime19_pitch",
 					"pivot": [0, 0, 0],
 					"cubes":[
