@@ -1,0 +1,59 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.enderman_aggro",
+				"texture_width": 1,
+				"texture_height": 3,
+				"visible_bounds_width": 5120,
+				"visible_bounds_height": 5120,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "enderman1_0",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "enderman1_1",
+					"parent": "enderman1_0",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-1024, 0, -1024],
+							"size": [2048, 0.25, 2048],
+							"uv": {
+								"up": {"uv": [1, 1], "uv_size": [-1, -1]}
+							}
+						},
+						{
+							"origin": [-512, -256, -512],
+							"size": [1024, 512, 1024],
+							"uv": {
+								"north": {"uv": [0, 1], "uv_size": [1, 1]},
+								"east": {"uv": [0, 1], "uv_size": [1, 1]},
+								"south": {"uv": [0, 1], "uv_size": [1, 1]},
+								"west": {"uv": [0, 1], "uv_size": [1, 1]},
+								"up": {"uv": [1, 2], "uv_size": [-1, -1]},
+								"down": {"uv": [1, 2], "uv_size": [-1, -1]}
+							}
+						},
+						{
+							"origin": [512, 256, 512],
+							"size": [-1024, -512, -1024],
+							"uv": {
+								"north": {"uv": [0, 3], "uv_size": [1, -1]},
+								"east": {"uv": [0, 3], "uv_size": [1, -1]},
+								"south": {"uv": [0, 3], "uv_size": [1, -1]},
+								"west": {"uv": [0, 3], "uv_size": [1, -1]},
+								"up": {"uv": [0, 2], "uv_size": [1, -1]},
+								"down": {"uv": [0, 3], "uv_size": [1, -1]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

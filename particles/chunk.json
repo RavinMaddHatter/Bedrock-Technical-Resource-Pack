@@ -1,0 +1,47 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "addon:chunk",
+      "basic_render_parameters": {
+        "material": "particles_blend",
+        "texture": "textures/chunk"
+      }
+    },
+    "components": {
+      "minecraft:emitter_rate_instant": {
+        "num_particles": 1
+      },
+      "minecraft:emitter_lifetime_once": {},
+      "minecraft:emitter_shape_point": {
+	"offset": [
+	  "v.toggle1 = 0; v.toggle2 = 1; v.toggle3 = 0; return 0;",
+	  0,
+	  0
+	]
+      },
+      "minecraft:particle_lifetime_expression": {
+        "expiration_expression": "v.toggle_action = query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell');	v.toggle1 = v.toggle_action && !v.toggle3 ? 1 : 0;		v.toggle2 = v.toggle1 && !v.toggle2 ? 1 : (v.toggle1 && v.toggle2 ? 0 : v.toggle2);		v.toggle3 = v.toggle_action ? 1 : 0; return v.toggle2;",
+        "max_lifetime": 86400
+      },
+      "minecraft:particle_motion_parametric": {
+	"relative_position": [
+	  "(math.floor(query.position(0)/16)*16) + v.re_pos_x",
+	  "(math.floor(query.position(1)/16)*16) + v.re_pos_y",
+	  "(math.floor(query.position(2)/16)*16) + v.re_pos_z"
+	],
+	"direction": [ "v.dir_x", "v.dir_y", "v.dir_z" ]
+      },
+      "minecraft:particle_appearance_billboard": {
+        "size": [ 8, 8 ],
+        "facing_camera_mode": "direction_z",
+        "uv": {
+          "texture_width": 1,
+          "texture_height": 6,
+          "uv": [ 0, "v.uv_z" ],
+          "uv_size": [ 1, 1 ]
+        }
+      }
+    }
+  }
+}

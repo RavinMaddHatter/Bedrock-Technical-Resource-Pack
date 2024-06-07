@@ -1,0 +1,157 @@
+{
+  "format_version" : "1.8.0",
+  "animations" : {
+    "animation.beacon_plyr": {
+      "animation_length": 86399.9,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+	  //50
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'north';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'south';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'east';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'west';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'up';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'up';	v.rot = 90;	v.uv_z = 0;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'down';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'down';	v.rot = 90;	v.uv_z = 0;" },
+	  //50b
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'north';	v.rot = 0;	v.uv_z = 1;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'east';	v.rot = 0;	v.uv_z = 1;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'south';	v.rot = 0;	v.uv_z = 1;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'west';	v.rot = 0;	v.uv_z = 1;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'up';	v.rot = 0;	v.uv_z = 1;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'down';	v.rot = 0;	v.uv_z = 1;" },
+	  
+	  //40
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'north';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'south';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'east';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'west';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'up';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'up';	v.rot = 90;	v.uv_z = 2;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'down';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'down';	v.rot = 90;	v.uv_z = 2;" },
+	  //40b
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'north';	v.rot = 0;	v.uv_z = 3;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'east';	v.rot = 0;	v.uv_z = 3;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'south';	v.rot = 0;	v.uv_z = 3;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'west';	v.rot = 0;	v.uv_z = 3;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'up';	v.rot = 0;	v.uv_z = 3;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'down';	v.rot = 0;	v.uv_z = 3;" },
+	  
+	  //30
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'north';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'south';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'east';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'west';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'up';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'up';	v.rot = 90;	v.uv_z = 4;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'down';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'down';	v.rot = 90;	v.uv_z = 4;" },
+	  //30b
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'north';	v.rot = 0;	v.uv_z = 5;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'east';	v.rot = 0;	v.uv_z = 5;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'south';	v.rot = 0;	v.uv_z = 5;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'west';	v.rot = 0;	v.uv_z = 5;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'up';	v.rot = 0;	v.uv_z = 5;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'down';	v.rot = 0;	v.uv_z = 5;" },
+	  
+	  //20
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'north';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'south';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'east';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'west';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'up';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'up';	v.rot = 90;	v.uv_z = 6;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'down';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_plyr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'down';	v.rot = 90;	v.uv_z = 6;" },
+	  //20b
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'north';	v.rot = 0;	v.uv_z = 7;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'east';	v.rot = 0;	v.uv_z = 7;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'south';	v.rot = 0;	v.uv_z = 7;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'west';	v.rot = 0;	v.uv_z = 7;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'up';	v.rot = 0;	v.uv_z = 7;" },
+          { "effect": "beacon_out_plyr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'down';	v.rot = 0;	v.uv_z = 7;" },
+	  //marker
+	  { "effect": "spawn_marker_plyr", "pre_effect_script": "v.uv_z = 5;" }
+        ]
+      }
+    },
+    "animation.beacon_armr": {
+      "animation_length": 86399.9,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+	  //50
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'north';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'south';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'east';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'west';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'up';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'up';	v.rot = 90;	v.uv_z = 0;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'down';	v.rot = 0;	v.uv_z = 0;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'down';	v.rot = 90;	v.uv_z = 0;" },
+	  //50b
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'north';	v.rot = 0;	v.uv_z = 1;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'east';	v.rot = 0;	v.uv_z = 1;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'south';	v.rot = 0;	v.uv_z = 1;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'west';	v.rot = 0;	v.uv_z = 1;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'up';	v.rot = 0;	v.uv_z = 1;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 102;	v.height = 434;	v.side = 'down';	v.rot = 0;	v.uv_z = 1;" },
+	  
+	  //40
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'north';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'south';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'east';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'west';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'up';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'up';	v.rot = 90;	v.uv_z = 2;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'down';	v.rot = 0;	v.uv_z = 2;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 82;		v.height = 424;	v.side = 'down';	v.rot = 90;	v.uv_z = 2;" },
+	  //40b
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'north';	v.rot = 0;	v.uv_z = 3;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'east';	v.rot = 0;	v.uv_z = 3;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'south';	v.rot = 0;	v.uv_z = 3;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'west';	v.rot = 0;	v.uv_z = 3;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'up';	v.rot = 0;	v.uv_z = 3;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 82;	v.height = 424;	v.side = 'down';	v.rot = 0;	v.uv_z = 3;" },
+	  
+	  //30
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'north';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'south';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'east';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'west';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'up';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'up';	v.rot = 90;	v.uv_z = 4;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'down';	v.rot = 0;	v.uv_z = 4;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 62;		v.height = 414;	v.side = 'down';	v.rot = 90;	v.uv_z = 4;" },
+	  //30b
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'north';	v.rot = 0;	v.uv_z = 5;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'east';	v.rot = 0;	v.uv_z = 5;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'south';	v.rot = 0;	v.uv_z = 5;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'west';	v.rot = 0;	v.uv_z = 5;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'up';	v.rot = 0;	v.uv_z = 5;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 62;	v.height = 414;	v.side = 'down';	v.rot = 0;	v.uv_z = 5;" },
+	  
+	  //20
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'north';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'south';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'east';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'west';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'up';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'up';	v.rot = 90;	v.uv_z = 6;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'down';	v.rot = 0;	v.uv_z = 6;" },
+          { "effect": "beacon_in_armr", "pre_effect_script": "v.width = 42;		v.height = 404;	v.side = 'down';	v.rot = 90;	v.uv_z = 6;" },
+	  //20b
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'north';	v.rot = 0;	v.uv_z = 7;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'east';	v.rot = 0;	v.uv_z = 7;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'south';	v.rot = 0;	v.uv_z = 7;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'west';	v.rot = 0;	v.uv_z = 7;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'up';	v.rot = 0;	v.uv_z = 7;" },
+          { "effect": "beacon_out_armr", "pre_effect_script": "v.width = 42;	v.height = 404;	v.side = 'down';	v.rot = 0;	v.uv_z = 7;" }
+        ]
+      }
+    }
+  }
+}

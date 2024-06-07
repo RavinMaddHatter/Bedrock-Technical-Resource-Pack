@@ -1,0 +1,13 @@
+{
+  "materials": {
+    "version": "1.0.0",
+
+    "particles_blend_cull:particles_base": {
+      "+defines": [ "ENABLE_FOG" ],
+      "+states": [
+        "Blending",
+        "DisableDepthWrite"
+      ]
+    }
+  }
+}

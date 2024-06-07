@@ -8,83 +8,32 @@
 	"be_tech_rp": "be_tech_rp"
       },
       "textures": {
-        "spawn_distance": "textures/addon/spawn_distance",
-	"sim_distance": "textures/addon/sim_distance",
-	"guardian_spots": "textures/addon/guardian_spots",
-	"density": "textures/addon/density",
-	"egg_aggro": "textures/addon/egg_aggro",
-	"witch_hut": "textures/addon/witch_hut",
-	"torch_light": "textures/addon/torch_light",
-	"buried_treasure": "textures/addon/buried_treasure",
-	"scare_radius": "textures/addon/scare_radius",
-	"spawner_radius": "textures/addon/spawner_radius",
-	"enderman_aggro": "textures/addon/enderman_aggro",
-	"golem_spawn": "textures/addon/golem_spawn",
-	"outpost_spots_west": "textures/addon/outpost/outpost_spots_west",
-	"outpost_spots_east": "textures/addon/outpost/outpost_spots_east",
-	"outpost_spots_north": "textures/addon/outpost/outpost_spots_north",
-	"outpost_spots_south": "textures/addon/outpost/outpost_spots_south",
-	"pillager_target": "textures/addon/pillager_target",
-	"sugarcane": "textures/addon/sugarcane",
-	"crop_water": "textures/addon/crop_water",
-        "spider_blocking": "textures/addon/spider_blocking"
-      },
-      "animations": {	
-	"spawn_distance": "animation.spawn_distance",
-	"sim_distance": "animation.sim_distance",
-	"guardian_spots": "animation.guardian_spots",
-	"density": "animation.density",
-	"witch_hut": "animation.witch_hut",
-	"buried_treasure": "animation.buried_treasure",
-	"outpost_spots": "animation.outpost_spots"
-      },
-      "scripts": {
-        "pre_animation": [
-	  "v.chunk_align_x = ((query.position(0)-(math.floor(query.position(0)/16)*16))*-16)+128;",
-	  "v.chunk_align_y = math.lerp(0, 1, (1.6 - math.mod(query.position(1), 16) - (query.position(1) <= 0 ? 16)) * 16 + (query.vertical_speed * 0.5) + 0.25);",
-	  "v.chunk_align_z = ((query.position(2)-((math.floor(query.position(2)/16)+1)*16))*16)+128;",
-	  "v.chunk_align_pivot = -query.body_y_rotation;",
-	  "v.guardian_y_align = 39*16 - query.position(1)*16;",
-
-	  "v.spawn_show = query.get_equipped_item_name(0) == 'acacia_planks' || query.get_equipped_item_name(0) == 'bamboo_planks' || query.get_equipped_item_name(0) == 'birch_planks' || query.get_equipped_item_name(0) == 'cherry_planks' || query.get_equipped_item_name(0) == 'crimson_planks' || query.get_equipped_item_name(0) == 'dark_oak_planks' || query.get_equipped_item_name(0) == 'jungle_planks' || query.get_equipped_item_name(0) == 'mangrove_planks' || query.get_equipped_item_name(0) == 'oak_planks' || query.get_equipped_item_name(0) == 'spruce_planks' || query.get_equipped_item_name(0) == 'warped_planks';",
-	  "v.sim_show = query.get_equipped_item_name(0) == 'stick';",
-	  "v.density_show = query.get_equipped_item_name(0) == 'chest';",
-	  "v.guardian_show = query.get_equipped_item_name(0) == 'prismarine_shard';",
-	  "v.egg_show = query.get_equipped_item_name(0) == 'turtle_egg' || query.get_equipped_item_name(0) == 'rotten_flesh';",
-	  "v.witch_show = query.get_equipped_item_name(0) == 'sugar';",
-	  "v.torch_show = query.get_equipped_item_name(0) == 'torch';",
-	  "v.treasure_show = query.get_equipped_item_name(0) == 'filled_map' ;",
-	  "v.scare_show = query.get_equipped_item_name(0) == 'gunpowder';",
-	  "v.spawner_show = query.get_equipped_item_name(0) == 'string';",
-	  "v.enderman_show = query.get_equipped_item_name(0) == 'ender_pearl';",
-	  "v.golem_show = query.get_equipped_item_name(0) == 'iron_ingot' || query.get_equipped_item_name(0) == 'poppy';",
-	  "v.outpost_show = query.get_equipped_item_name(0) == 'banner' && variable.armor_stand.pose_index == 0;",
-	  "v.pillager_show = query.get_equipped_item_name(0) == 'crossbow';",
-	  "v.sugarcane_show = query.get_equipped_item_name(0) == 'sugar_cane';",
-	  "v.spider_show = query.get_equipped_item_name(0) == 'spider_eye';",
-	  "v.crop_show = query.get_equipped_item_name(0) == 'water_bucket' || query.get_equipped_item_name(0) == 'wheat_seeds';"
-        ],
-        "animate": [
-          "controller.pose", //vanilla
-          "controller.wiggling", //vanilla
-	  
-          {"spawn_distance": "v.spawn_show"},
-	  {"sim_distance": "v.sim_show"},
-	  {"guardian_spots": "v.guardian_show"},
-	  {"density": "v.density_show"},
-	  {"witch_hut": "v.witch_show"},
-	  {"buried_treasure": "v.treasure_show"},
-	  {"outpost_spots": "v.outpost_show"},
-	  "scale" //structura
-        ]
+	"guardian_spots": "textures/guardian_spots",
+	"density": "textures/density",
+	"egg_aggro": "textures/egg_aggro",
+	"snowman_aggro": "textures/snowman_aggro",
+	"witch_hut": "textures/witch_hut",
+	"torch_light": "textures/torch_light",
+	"buried_treasure": "textures/buried_treasure",
+	"scare_radius": "textures/scare_radius",
+	"spawner_radius": "textures/spawner_radius",
+	"enderman_aggro": "textures/enderman_aggro",
+	"golem_spawn": "textures/golem_spawn",
+	"outpost_spots_west": "textures/outpost/outpost_spots_west",
+	"outpost_spots_east": "textures/outpost/outpost_spots_east",
+	"outpost_spots_north": "textures/outpost/outpost_spots_north",
+	"outpost_spots_south": "textures/outpost/outpost_spots_south",
+	"pillager_target": "textures/pillager_target",
+	"sugarcane": "textures/sugarcane",
+	"crop_water": "textures/crop_water",
+        "spider_blocking": "textures/spider_blocking"
       },
       "geometry": {
         "default": "geometry.armor_stand.larger_render",
-        "spawn_distance": "geometry.spawn_distance",
-        "sim_distance": "geometry.sim_distance",
 	"guardian_spots": "geometry.guardian_spots",
 	"density": "geometry.density",
 	"egg_aggro": "geometry.egg_aggro",
+	"snowman_aggro": "geometry.snowman_aggro",
 	"witch_hut": "geometry.witch_hut",
 	"torch_light": "geometry.torch_light",
 	"buried_treasure": "geometry.buried_treasure",
@@ -98,14 +47,88 @@
 	"crop_water": "geometry.crop_water",
 	"spider_blocking": "geometry.spider_blocking"
       },
+      "scripts": {
+        "pre_animation": [
+	  "v.chunk_align_x = ((query.position(0)-(math.floor(query.position(0)/16)*16))*-16)+128;",
+	  "v.chunk_align_y = math.lerp(0, 1, (1.6 - math.mod(query.position(1), 16) - (query.position(1) <= 0 ? 16)) * 16 + (query.vertical_speed * 0.5) + 0.25);",
+	  "v.chunk_align_z = ((query.position(2)-((math.floor(query.position(2)/16)+1)*16))*16)+128;",
+	  "v.chunk_align_pivot = -query.body_y_rotation;",
+	  "v.guardian_y_align = 39*16 - query.position(1)*16;",
+	  
+	  "v.density_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:chest');",
+	  "v.guardian_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:prismarine_shard');",
+	  "v.egg_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:turtle_egg', 'minecraft:rotten_flesh');",
+	  "v.snowman_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:snowball');",
+	  "v.witch_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:sugar');",
+	  "v.torch_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:torch');",
+	  "v.treasure_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:filled_map');",
+	  "v.scare_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:gunpowder');",
+	  "v.spawner_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:string');",
+	  "v.enderman_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:ender_pearl');",
+	  "v.golem_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:iron_ingot', 'minecraft:poppy');",
+	  "v.outpost_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:banner');",
+	  "v.pillager_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:crossbow');",
+	  "v.sugarcane_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:sugar_cane');",
+	  "v.spider_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:spider_eye');",
+	  "v.crop_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:water_bucket', 'minecraft:wheat_seeds');",
+	  
+	  "v.sim_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:stick');",
+	  "v.spawn_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:acacia_planks', 'minecraft:bamboo_planks', 'minecraft:birch_planks', 'minecraft:cherry_planks', 'minecraft:crimson_planks', 'minecraft:dark_oak_planks', 'minecraft:jungle_planks', 'minecraft:mangrove_planks', 'minecraft:oak_planks', 'minecraft:spruce_planks', 'minecraft:warped_planks');",
+	  "v.beacon_show = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:emerald_block', 'minecraft:gold_block', 'minecraft:diamond_block', 'minecraft:iron_block', 'minecraft:netherite_block');"
+        ],
+        "animate": [
+          "controller.pose", //vanilla
+          "controller.wiggling", //vanilla
+	  
+	  {"guardian_spots": "v.guardian_show"},
+	  {"density": "v.density_show"},
+	  {"witch_hut": "v.witch_show"},
+	  {"buried_treasure": "v.treasure_show"},
+	  {"outpost_spots": "v.outpost_show"},
+	  {"spawner_radius": "v.spawner_show && variable.armor_stand.pose_index > 0"},
+	  "scale", //structura
+	  "sim_control_armr",
+	  "spawn_control_armr",
+	  "beacon_control_armr"
+        ],
+	"should_update_bones_and_effects_offscreen": true
+      },
+      "animations": {	
+	"guardian_spots": "animation.guardian_spots",
+	"density": "animation.density",
+	"witch_hut": "animation.witch_hut",
+	"buried_treasure": "animation.buried_treasure",
+	"outpost_spots": "animation.outpost_spots",
+	"spawner_radius": "animation.spawner_radius",
+	"sim_armr": "animation.sim_armr",
+	"sim_control_armr": "controller.animation.sim_control_armr",
+	"spawn4_armr": "animation.spawn4_armr",
+	"spawn6_armr": "animation.spawn6_armr",
+	"spawn8_armr": "animation.spawn8_armr",
+	"spawn10_armr": "animation.spawn10_armr",
+	"spawn12_armr": "animation.spawn12_armr",
+	"spawn_clear_armr": "animation.spawn_clear_armr",
+	"spawn_control_armr": "controller.animation.spawn_control_armr",
+	"beacon_armr": "animation.beacon_armr",
+	"beacon_control_armr": "controller.animation.beacon_control_armr"
+      },
+      "particle_effects": {
+	"sim_armr": "addon:sim_armr",
+	"spawn4_xz_armr": "addon:spawn4_xz_armr",
+	"spawn4_y_armr": "addon:spawn4_y_armr",
+	"big_spawn_armr": "addon:big_spawn_armr",
+	"spawn_128_armr": "addon:spawn_128_armr",
+	"spawn_marker_armr": "addon:spawn_marker_armr",
+	"beacon_in_armr": "addon:beacon_in_armr",
+	"beacon_out_armr": "addon:beacon_out_armr"
+      },
       "render_controllers": [
         "controller.render.armor_stand", //vanilla
 	
-	{ "controller.render.spawn_distance": "v.spawn_show" },
-	{ "controller.render.sim_distance": "v.sim_show" },
 	{ "controller.render.density": "v.density_show" },
 	{"controller.render.guardian_spots": "v.guardian_show"},
 	{"controller.render.egg_aggro": "v.egg_show"},
+	{"controller.render.snowman_aggro": "v.snowman_show"},
 	{"controller.render.witch_hut": "v.witch_show"},
 	{"controller.render.torch_light": "v.torch_show"},
 	{"controller.render.buried_treasure": "v.treasure_show"},
@@ -122,5 +145,4 @@
       ]
     }
   }
-
 }

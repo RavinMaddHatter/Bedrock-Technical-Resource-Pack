@@ -1,0 +1,36 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "addon:slime_17",
+      "basic_render_parameters": {
+        "material": "particles_blend",
+        "texture": "textures/slime/(17) 128,-384 to 384,-128"
+      }
+    },
+    "components": {
+      "minecraft:emitter_rate_instant": {
+        "num_particles": 1
+      },
+      "minecraft:emitter_lifetime_once": {},
+      "minecraft:emitter_shape_point": {},
+      "minecraft:particle_lifetime_expression": {
+        "expiration_expression": "!query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:nautilus_shell')",
+        "max_lifetime": 86400
+      },
+      "minecraft:particle_motion_parametric": {
+	"relative_position": [
+	  4096,
+	  "query.position(1) - 1.5",
+	  -4096
+	],
+	"direction": [ 0, -1, 0 ],
+	"rotation": 180
+      },
+      "minecraft:particle_appearance_billboard": {
+        "size": [ 2048, 2048 ],
+        "facing_camera_mode": "direction_z"
+      }
+    }
+  }
+}

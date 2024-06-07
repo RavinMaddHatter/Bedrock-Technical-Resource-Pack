@@ -1,0 +1,36 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.snowman_aggro",
+				"texture_width": 1,
+				"texture_height": 1,
+				"visible_bounds_width": 5120,
+				"visible_bounds_height": 5120,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "snowman1_0",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 0, 0]
+				},
+				{
+					"name": "snowman1_1",
+					"parent": "snowman1_0",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-264, 0, -264],
+							"size": [528, 0.25, 528],
+							"uv": {
+								"up": {"uv": [1, 1], "uv_size": [-1, -1]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,36 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.sugarcane",
+				"texture_width": 1,
+				"texture_height": 1,
+				"visible_bounds_width": 5120,
+				"visible_bounds_height": 5120,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "cane_0",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 0, 0]
+				},
+				{
+					"name": "cane_1",
+					"parent": "cane_0",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-120, 1, -120],
+							"size": [240, 0.25, 240],
+							"uv": {
+								"up": {"uv": [1, 1], "uv_size": [-1, -1]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

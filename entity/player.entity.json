@@ -3,67 +3,20 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "minecraft:player",
-      "materials": {
-	"chunk": "entity_emissive_alpha",
-	"slime": "be_tech_rp"
-      },
-      "textures": {	
-        "chunk": "textures/addon/chunk",
-        "slime1": "textures/addon/slime/(1) -640,-640 to -384,-384",
-        "slime2": "textures/addon/slime/(2) -640,-384 to -384,-128",
-        "slime3": "textures/addon/slime/(3) -640,-128 to -384,128",
-        "slime4": "textures/addon/slime/(4) -640,128 to -384,384",
-        "slime5": "textures/addon/slime/(5) -640,384 to -384,640",
-        "slime6": "textures/addon/slime/(6) -384,-640 to -128,-384",
-        "slime7": "textures/addon/slime/(7) -384,-384 to -128,-128",
-        "slime8": "textures/addon/slime/(8) -384,-128 to -128,128",
-        "slime9": "textures/addon/slime/(9) -384,128 to -128,384",
-        "slime10": "textures/addon/slime/(10) -384,384 to -128,640",
-        "slime11": "textures/addon/slime/(11) -128,-640 to 128,-384",
-        "slime12": "textures/addon/slime/(12) -128,-384 to 128,-128",
-        "slime13": "textures/addon/slime/(13) -128,-128 to 128,128",
-        "slime14": "textures/addon/slime/(14) -128,128 to 128,384",
-        "slime15": "textures/addon/slime/(15) -128,384 to 128,640",
-        "slime16": "textures/addon/slime/(16) 128,-640 to 384,-384",
-        "slime17": "textures/addon/slime/(17) 128,-384 to 384,-128",
-        "slime18": "textures/addon/slime/(18) 128,-128 to 384,128",
-        "slime19": "textures/addon/slime/(19) 128,128 to 384,384",
-        "slime20": "textures/addon/slime/(20) 128,384 to 384,640",
-        "slime21": "textures/addon/slime/(21) 384,-640 to 640,-384",
-        "slime22": "textures/addon/slime/(22) 384,-384 to 640,-128",
-        "slime23": "textures/addon/slime/(23) 384,-128 to 640,128",
-        "slime24": "textures/addon/slime/(24) 384,128 to 640,384",
-        "slime25": "textures/addon/slime/(25) 384,384 to 640,640"
-      },
-      "geometry": {
-        "chunk": "geometry.chunk",
-        "slime1": "geometry.slime1",
-        "slime2": "geometry.slime2",
-        "slime3": "geometry.slime3",
-        "slime4": "geometry.slime4",
-        "slime5": "geometry.slime5",
-        "slime6": "geometry.slime6",
-        "slime7": "geometry.slime7",
-        "slime8": "geometry.slime8",
-        "slime9": "geometry.slime9",
-        "slime10": "geometry.slime10",
-        "slime11": "geometry.slime11",
-        "slime12": "geometry.slime12",
-        "slime13": "geometry.slime13",
-        "slime14": "geometry.slime14",
-        "slime15": "geometry.slime15",
-        "slime16": "geometry.slime16",
-        "slime17": "geometry.slime17",
-        "slime18": "geometry.slime18",
-        "slime19": "geometry.slime19",
-        "slime20": "geometry.slime20",
-        "slime21": "geometry.slime21",
-        "slime22": "geometry.slime22",
-        "slime23": "geometry.slime23",
-        "slime24": "geometry.slime24",
-        "slime25": "geometry.slime25"
-      },
       "scripts": {
+        "initialize": [
+          "variable.is_holding_right = 0.0;", //Vanilla
+          "variable.is_blinking = 0.0;", //Vanilla
+          "variable.last_blink_time = 0.0;", //Vanilla
+          "variable.hand_bob = 0.0;", //Vanilla
+	  
+          "v.chunk_toggle1 = 0;",
+          "v.chunk_toggle2 = 0;",
+          "v.chunk_toggle3 = 0;",
+          "v.spawn_toggle1 = 0;",
+          "v.spawn_toggle2 = 0;",
+          "v.spawn_toggle3 = 0;"
+        ],
         "pre_animation": [
           "variable.helmet_layer_visible = 1.0;", //vanilla
           "variable.leg_layer_visible = 1.0;", //vanilla
@@ -76,60 +29,81 @@
           "variable.map_angle = math.clamp(1 - variable.player_x_rotation / 45.1, 0.0, 1.0);", //vanilla
           "variable.item_use_normalized = query.main_hand_item_use_duration / query.main_hand_item_max_duration;", //vanilla
 	  
-	  "v.chunk_align_x = ((query.position(0)-(math.floor(query.position(0)/16)*16))*-16)+128;",
-	  "v.chunk_align_y = math.lerp(0, 1, (1.6 - math.mod(query.position(1), 16) - (query.position(1) <= 0 ? 16)) * 16 + (query.vertical_speed * 0.5) + 0.25);",
-	  "v.chunk_align_z = ((query.position(2)-((math.floor(query.position(2)/16)+1)*16))*16)+128;",
-	  "v.chunk_align_pivot = -query.body_y_rotation;",
-	  "v.chunk_align_pivot_fp = variable.is_first_person ? -query.target_x_rotation:-query.body_y_rotation;",
+	  "v.chunk_toggle_action = query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell');",
+	  "v.chunk_toggle1 = v.chunk_toggle_action && !v.chunk_toggle3 ? 1 : 0;",
+	  "v.chunk_toggle2 = v.chunk_toggle1 && !v.chunk_toggle2 ? 1 : (v.chunk_toggle1 && v.chunk_toggle2 ? 0 : v.chunk_toggle2);",
+	  "v.chunk_toggle3 = v.chunk_toggle_action ? 1 : 0;",
 	  
-	  "v.chunk_show = !variable.map_face_icon && !variable.is_first_person && !query.is_in_ui && !variable.is_paperdoll && (query.get_equipped_item_name(1) == 'firework_rocket' || query.get_equipped_item_name(1) == 'nautilus_shell');",
-	  "v.slime_show = !variable.map_face_icon && !variable.is_first_person && !query.is_in_ui && !variable.is_paperdoll && query.get_equipped_item_name(1) == 'nautilus_shell';"
+	  "v.slime_show = query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:nautilus_shell');",
+	  
+	  "v.spawn_toggle_action = query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell') && query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell');",
+	  "v.spawn_toggle1 = v.spawn_toggle_action && !v.spawn_toggle3 ? 1 : 0;",
+	  "v.spawn_toggle2 = v.spawn_toggle1 && v.spawn_toggle2 < 7 ? v.spawn_toggle2 + 1 : (v.spawn_toggle1 && v.spawn_toggle2 == 7 ? 0 : v.spawn_toggle2);",
+	  "v.spawn_toggle3 = v.spawn_toggle_action ? 1 : 0;"
         ],
         "animate": [
           "root", //vanilla
 	  
-	  {"chunk": "v.chunk_show"},
-	  {"slime": "v.slime_show"}
-        ]
+	  "chunk_control",
+	  "slime_control",
+	  "sim_control_plyr",
+	  "spawn_control_plyr",
+	  "beacon_control_plyr"
+        ],
+	"should_update_bones_and_effects_offscreen": true
       },
       "animations": {
 	"chunk": "animation.chunk",
-	"slime": "animation.slime"
+	"chunk_control": "controller.animation.chunk_control",
+	"slime": "animation.slime",
+	"slime_control": "controller.animation.slime_control",
+	"sim_plyr": "animation.sim_plyr",
+	"sim_control_plyr": "controller.animation.sim_control_plyr",
+	"spawn4_plyr": "animation.spawn4_plyr",
+	"spawn6_plyr": "animation.spawn6_plyr",
+	"spawn8_plyr": "animation.spawn8_plyr",
+	"spawn10_plyr": "animation.spawn10_plyr",
+	"spawn12_plyr": "animation.spawn12_plyr",
+	"spawn_control_plyr": "controller.animation.spawn_control_plyr",
+	"beacon_plyr": "animation.beacon_plyr",
+	"beacon_control_plyr": "controller.animation.beacon_control_plyr"
       },
-      "render_controllers": [
-        { "controller.render.player.first_person_spectator": "variable.is_first_person && query.is_spectator" }, //vanilla
-        { "controller.render.player.third_person_spectator": "!variable.is_first_person && !variable.map_face_icon && query.is_spectator" }, //vanilla
-        { "controller.render.player.first_person": "variable.is_first_person && !query.is_spectator" }, //vanilla
-        { "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon && !query.is_spectator" }, //vanilla
-        { "controller.render.player.map": "variable.map_face_icon" }, //vanilla
-	
-        { "controller.render.chunk": "v.chunk_show" },
-        { "controller.render.slime1": "v.slime_show" },
-        { "controller.render.slime2": "v.slime_show" },
-        { "controller.render.slime3": "v.slime_show" },
-        { "controller.render.slime4": "v.slime_show" },
-        { "controller.render.slime5": "v.slime_show" },
-        { "controller.render.slime6": "v.slime_show" },
-        { "controller.render.slime7": "v.slime_show" },
-        { "controller.render.slime8": "v.slime_show" },
-        { "controller.render.slime9": "v.slime_show" },
-        { "controller.render.slime10": "v.slime_show" },
-        { "controller.render.slime11": "v.slime_show" },
-        { "controller.render.slime12": "v.slime_show" },
-        { "controller.render.slime13": "v.slime_show" },
-        { "controller.render.slime14": "v.slime_show" },
-        { "controller.render.slime15": "v.slime_show" },
-        { "controller.render.slime16": "v.slime_show" },
-        { "controller.render.slime17": "v.slime_show" },
-        { "controller.render.slime18": "v.slime_show" },
-        { "controller.render.slime19": "v.slime_show" },
-        { "controller.render.slime20": "v.slime_show" },
-        { "controller.render.slime21": "v.slime_show" },
-        { "controller.render.slime22": "v.slime_show" },
-        { "controller.render.slime23": "v.slime_show" },
-        { "controller.render.slime24": "v.slime_show" },
-        { "controller.render.slime25": "v.slime_show" }
-      ]
+      "particle_effects": {
+	"chunk": "addon:chunk",
+	"slime_1": "addon:slime_1",
+	"slime_2": "addon:slime_2",
+	"slime_3": "addon:slime_3",
+	"slime_4": "addon:slime_4",
+	"slime_5": "addon:slime_5",
+	"slime_6": "addon:slime_6",
+	"slime_7": "addon:slime_7",
+	"slime_8": "addon:slime_8",
+	"slime_9": "addon:slime_9",
+	"slime_10": "addon:slime_10",
+	"slime_11": "addon:slime_11",
+	"slime_12": "addon:slime_12",
+	"slime_13": "addon:slime_13",
+	"slime_14": "addon:slime_14",
+	"slime_15": "addon:slime_15",
+	"slime_16": "addon:slime_16",
+	"slime_17": "addon:slime_17",
+	"slime_18": "addon:slime_18",
+	"slime_19": "addon:slime_19",
+	"slime_20": "addon:slime_20",
+	"slime_21": "addon:slime_21",
+	"slime_22": "addon:slime_22",
+	"slime_23": "addon:slime_23",
+	"slime_24": "addon:slime_24",
+	"slime_25": "addon:slime_25",
+	"sim_plyr": "addon:sim_plyr",
+	"spawn4_xz_plyr": "addon:spawn4_xz_plyr",
+	"spawn4_y_plyr": "addon:spawn4_y_plyr",
+	"big_spawn_plyr": "addon:big_spawn_plyr",
+	"spawn_128_plyr": "addon:spawn_128_plyr",
+	"spawn_marker_plyr": "addon:spawn_marker_plyr",
+	"beacon_in_plyr": "addon:beacon_in_plyr",
+	"beacon_out_plyr": "addon:beacon_out_plyr"
+      }
     }
   }
 }

@@ -1,0 +1,24 @@
+{
+  "format_version" : "1.8.0",
+  "animations" : {
+    "animation.sim_plyr": {
+      "animation_length": 86399.9,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          { "effect": "sim_plyr" },
+	  { "effect": "spawn_marker_plyr", "pre_effect_script": "v.uv_z = 5;" }
+        ]
+      }
+    },
+    "animation.sim_armr": {
+      "animation_length": 86399.9,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          { "effect": "sim_armr" }
+        ]
+      }
+    }
+  }
+}

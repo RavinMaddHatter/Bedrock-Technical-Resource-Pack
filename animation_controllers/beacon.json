@@ -1,0 +1,37 @@
+{
+  "format_version" : "1.10.0",
+  "animation_controllers" : {
+    "controller.animation.beacon_control_plyr" : {
+      "initial_state" : "default",
+      "states" : {
+        "default" : {
+          "transitions" : [
+            { "show" : "query.is_local_player && !query.is_in_ui && v.spawn_toggle2 == 7" }
+          ]
+        },
+        "show" : {
+          "animations": [ "beacon_plyr" ],
+          "transitions" : [
+            { "default" : "v.spawn_toggle2 != 7" }
+          ]
+        }
+      }
+    },
+    "controller.animation.beacon_control_armr" : {
+      "initial_state" : "default",
+      "states" : {
+        "default" : {
+          "transitions" : [
+            { "show" : "v.beacon_show" }
+          ]
+        },
+        "show" : {
+          "animations": [ "beacon_armr" ],
+          "transitions" : [
+            { "default" : "!v.beacon_show" }
+          ]
+        }
+      }
+    }
+  }
+}

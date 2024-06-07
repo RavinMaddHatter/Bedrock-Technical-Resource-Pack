@@ -1,0 +1,19 @@
+{
+  "format_version" : "1.8.0",
+  "animations" : {
+    "animation.chunk": {
+      "animation_length": 86399.9,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          { "effect": "chunk", "pre_effect_script": "v.re_pos_x = 8;	v.re_pos_y = 8;		v.re_pos_z = 0;		v.dir_x = 0;	v.dir_y = 0;	v.dir_z = 1;	v.uv_z = 1;" },//north
+          { "effect": "chunk", "pre_effect_script": "v.re_pos_x = 16;	v.re_pos_y = 8;		v.re_pos_z = 8;		v.dir_x = -1;	v.dir_y = 0;	v.dir_z = 0;	v.uv_z = 2;" },//east
+          { "effect": "chunk", "pre_effect_script": "v.re_pos_x = 8;	v.re_pos_y = 8;		v.re_pos_z = 16;	v.dir_x = 0;	v.dir_y = 0;	v.dir_z = -1;	v.uv_z = 3;" },//south
+          { "effect": "chunk", "pre_effect_script": "v.re_pos_x = 0;	v.re_pos_y = 8;		v.re_pos_z = 8;		v.dir_x = 1;	v.dir_y = 0;	v.dir_z = 0;	v.uv_z = 4;" },//west
+          { "effect": "chunk", "pre_effect_script": "v.re_pos_x = 8;	v.re_pos_y = 16;	v.re_pos_z = 8;		v.dir_x = 0;	v.dir_y = 1;	v.dir_z = 0;	v.uv_z = 0;" },//up
+          { "effect": "chunk", "pre_effect_script": "v.re_pos_x = 8;	v.re_pos_y = 0;		v.re_pos_z = 8;		v.dir_x = 0;	v.dir_y = -1;	v.dir_z = 0;	v.uv_z = 5;" }//down
+        ]
+      }
+    }
+  }
+}

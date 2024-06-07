@@ -1,0 +1,100 @@
+{
+  "format_version" : "1.10.0",
+  "animation_controllers" : {
+    "controller.animation.spawn_control_plyr" : {
+      "initial_state" : "default",
+      "states" : {
+        "default" : {
+          "transitions" : [
+            { "spawn4" : "query.is_local_player && !query.is_in_ui && v.spawn_toggle2 == 1" },
+            { "spawn6" : "query.is_local_player && !query.is_in_ui && v.spawn_toggle2 == 2" },
+            { "spawn8" : "query.is_local_player && !query.is_in_ui && v.spawn_toggle2 == 3" },
+            { "spawn10" : "query.is_local_player && !query.is_in_ui && v.spawn_toggle2 == 4" },
+            { "spawn12" : "query.is_local_player && !query.is_in_ui && v.spawn_toggle2 == 5" }
+          ]
+        },
+        "spawn4" : {
+          "animations": [ "spawn4_plyr" ],
+          "transitions" : [
+            { "default" : "v.spawn_toggle2 != 1" }
+          ]
+        },
+        "spawn6" : {
+          "animations": [ "spawn6_plyr" ],
+          "transitions" : [
+            { "default" : "v.spawn_toggle2 != 2" }
+          ]
+        },
+        "spawn8" : {
+          "animations": [ "spawn8_plyr" ],
+          "transitions" : [
+            { "default" : "v.spawn_toggle2 != 3" }
+          ]
+        },
+        "spawn10" : {
+          "animations": [ "spawn10_plyr" ],
+          "transitions" : [
+            { "default" : "v.spawn_toggle2 != 4" }
+          ]
+        },
+        "spawn12" : {
+          "animations": [ "spawn12_plyr" ],
+          "transitions" : [
+            { "default" : "v.spawn_toggle2 != 5" }
+          ]
+        }
+      }
+    },
+    "controller.animation.spawn_control_armr" : {
+      "initial_state" : "default",
+      "states" : {
+        "default" : {
+          "transitions" : [
+            { "spawn4" : "query.life_time > 1 && variable.armor_stand.pose_index == 0 && v.spawn_show" },
+            { "spawn6" : "query.life_time > 1 && variable.armor_stand.pose_index == 1 && v.spawn_show" },
+            { "spawn8" : "query.life_time > 1 && variable.armor_stand.pose_index == 2 && v.spawn_show" },
+            { "spawn10" : "query.life_time > 1 && variable.armor_stand.pose_index == 3 && v.spawn_show" },
+            { "spawn12" : "query.life_time > 1 && variable.armor_stand.pose_index == 4 && v.spawn_show" },
+            { "spawn_clear" : "variable.armor_stand.pose_index >= 5 && v.spawn_show" }
+          ]
+        },
+        "spawn4" : {
+          "animations": [ "spawn4_armr" ],
+          "transitions" : [
+            { "default" : "variable.armor_stand.pose_index != 0 || !v.spawn_show" }
+          ]
+        },
+        "spawn6" : {
+          "animations": [ "spawn6_armr" ],
+          "transitions" : [
+            { "default" : "variable.armor_stand.pose_index != 1 || !v.spawn_show" }
+          ]
+        },
+        "spawn8" : {
+          "animations": [ "spawn8_armr" ],
+          "transitions" : [
+            { "default" : "variable.armor_stand.pose_index != 2 || !v.spawn_show" }
+          ]
+        },
+        "spawn10" : {
+          "animations": [ "spawn10_armr" ],
+          "transitions" : [
+            { "default" : "variable.armor_stand.pose_index != 3 || !v.spawn_show" }
+          ]
+        },
+        "spawn12" : {
+          "animations": [ "spawn12_armr" ],
+          "transitions" : [
+            { "default" : "variable.armor_stand.pose_index != 4 || !v.spawn_show" }
+          ]
+        },
+        "spawn_clear" : {
+          "animations": [ "spawn_clear_armr" ],
+          "transitions" : [
+            { "default" : "!(variable.armor_stand.pose_index >= 5) || !v.spawn_show" }
+          ]
+        }
+      }
+    }
+  }
+}

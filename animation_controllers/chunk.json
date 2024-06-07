@@ -1,0 +1,21 @@
+{
+  "format_version" : "1.10.0",
+  "animation_controllers" : {
+    "controller.animation.chunk_control" : {
+      "initial_state" : "default",
+      "states" : {
+        "default" : {
+          "transitions" : [
+            { "show" : "query.is_local_player && !query.is_in_ui && v.chunk_toggle2" }
+          ]
+        },
+        "show" : {
+          "animations": [ "chunk" ],
+          "transitions" : [
+            { "default" : "!v.chunk_toggle2" }
+          ]
+        }
+      }
+    }
+  }
+}

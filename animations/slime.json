@@ -1,0 +1,38 @@
+{
+  "format_version" : "1.8.0",
+  "animations" : {
+    "animation.slime": {
+      "animation_length": 86399.9,
+      "loop": true,
+      "particle_effects": {
+        "0.0": [
+          { "effect": "slime_1" },
+          { "effect": "slime_2" },
+          { "effect": "slime_3" },
+          { "effect": "slime_4" },
+          { "effect": "slime_5" },
+          { "effect": "slime_6" },
+          { "effect": "slime_7" },
+          { "effect": "slime_8" },
+          { "effect": "slime_9" },
+          { "effect": "slime_10" },
+          { "effect": "slime_11" },
+          { "effect": "slime_12" },
+          { "effect": "slime_13" },
+          { "effect": "slime_14" },
+          { "effect": "slime_15" },
+          { "effect": "slime_16" },
+          { "effect": "slime_17" },
+          { "effect": "slime_18" },
+          { "effect": "slime_19" },
+          { "effect": "slime_20" },
+          { "effect": "slime_21" },
+          { "effect": "slime_22" },
+          { "effect": "slime_23" },
+          { "effect": "slime_24" },
+          { "effect": "slime_25" }
+        ]
+      }
+    }
+  }
+}

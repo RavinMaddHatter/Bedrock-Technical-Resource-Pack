@@ -1,0 +1,83 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.golem_spawn",
+				"texture_width": 1,
+				"texture_height": 4,
+				"visible_bounds_width": 5120,
+				"visible_bounds_height": 5120,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "golem1_0",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "golem1_1",
+					"parent": "golem1_0",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-128, -96, -128],
+							"size": [256, 192, 256],
+							"uv": {
+								"north": {"uv": [0, 0], "uv_size": [1, 1]},
+								"east": {"uv": [0, 0], "uv_size": [1, 1]},
+								"south": {"uv": [0, 0], "uv_size": [1, 1]},
+								"west": {"uv": [0, 0], "uv_size": [1, 1]},
+								"up": {"uv": [1, 1], "uv_size": [-1, -1]},
+								"down": {"uv": [1, 1], "uv_size": [-1, -1]}
+							}
+						},
+						{
+							"origin": [128, 96, 128],
+							"size": [-256, -192, -256],
+							"uv": {
+								"north": {"uv": [0, 3], "uv_size": [1, -1]},
+								"east": {"uv": [0, 3], "uv_size": [1, -1]},
+								"south": {"uv": [0, 3], "uv_size": [1, -1]},
+								"west": {"uv": [0, 3], "uv_size": [1, -1]},
+								"up": {"uv": [0, 1], "uv_size": [1, -1]},
+								"down": {"uv": [0, 3], "uv_size": [1, -1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "golem1_2",
+					"parent": "golem1_0",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-520, -200, -520],
+							"size": [1040, 400, 1040],
+							"uv": {
+								"north": {"uv": [0, 1], "uv_size": [1, 1]},
+								"east": {"uv": [0, 1], "uv_size": [1, 1]},
+								"south": {"uv": [0, 1], "uv_size": [1, 1]},
+								"west": {"uv": [0, 1], "uv_size": [1, 1]},
+								"up": {"uv": [1, 2], "uv_size": [-1, -1]},
+								"down": {"uv": [1, 2], "uv_size": [-1, -1]}
+							}
+						},
+						{
+							"origin": [520, 200, 520],
+							"size": [-1040, -400, -1040],
+							"uv": {
+								"north": {"uv": [0, 4], "uv_size": [1, -1]},
+								"east": {"uv": [0, 4], "uv_size": [1, -1]},
+								"south": {"uv": [0, 4], "uv_size": [1, -1]},
+								"west": {"uv": [0, 4], "uv_size": [1, -1]},
+								"up": {"uv": [0, 2], "uv_size": [1, -1]},
+								"down": {"uv": [0, 4], "uv_size": [1, -1]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

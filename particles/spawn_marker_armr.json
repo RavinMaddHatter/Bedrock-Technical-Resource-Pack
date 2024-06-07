@@ -1,0 +1,42 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "addon:spawn_marker_armr",
+      "basic_render_parameters": {
+        "material": "particles_blend",
+        "texture": "textures/spawn_marker"
+      }
+    },
+    "components": {
+      "minecraft:emitter_rate_instant": {
+        "num_particles": 1
+      },
+      "minecraft:emitter_lifetime_once": {},
+      "minecraft:emitter_shape_point": {
+	"offset": [
+	  0,
+	  2.5,
+	  0
+	]
+      },
+      "minecraft:particle_lifetime_expression": {
+        "expiration_expression": "(query.effect_particle_count > v.p_cap && v.particle_age > 1) || (query.distance_from_camera < 32 && !query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:acacia_planks', 'minecraft:bamboo_planks', 'minecraft:birch_planks', 'minecraft:cherry_planks', 'minecraft:crimson_planks', 'minecraft:dark_oak_planks', 'minecraft:jungle_planks', 'minecraft:mangrove_planks', 'minecraft:oak_planks', 'minecraft:spruce_planks', 'minecraft:warped_planks'))",
+        "max_lifetime": 86400
+      },
+      "minecraft:particle_motion_parametric": {
+	"direction": [ 0, 0, 1 ]
+      },
+      "minecraft:particle_appearance_billboard": {
+        "size": [ 0.5, 0.5 ],
+        "facing_camera_mode": "rotate_y",
+        "uv": {
+          "texture_width": 1,
+          "texture_height": 6,
+          "uv": [ 0, "v.uv_z" ],
+          "uv_size": [ 1, 1 ]
+        }
+      }
+    }
+  }
+}

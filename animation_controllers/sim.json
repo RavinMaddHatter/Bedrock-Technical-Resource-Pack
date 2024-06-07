@@ -1,0 +1,37 @@
+{
+  "format_version" : "1.10.0",
+  "animation_controllers" : {
+    "controller.animation.sim_control_plyr" : {
+      "initial_state" : "default",
+      "states" : {
+        "default" : {
+          "transitions" : [
+            { "show" : "query.is_local_player && !query.is_in_ui && v.spawn_toggle2 == 6" }
+          ]
+        },
+        "show" : {
+          "animations": [ "sim_plyr" ],
+          "transitions" : [
+            { "default" : "v.spawn_toggle2 != 6" }
+          ]
+        }
+      }
+    },
+    "controller.animation.sim_control_armr" : {
+      "initial_state" : "default",
+      "states" : {
+        "default" : {
+          "transitions" : [
+            { "show" : "v.sim_show" }
+          ]
+        },
+        "show" : {
+          "animations": [ "sim_armr" ],
+          "transitions" : [
+            { "default" : "!v.sim_show" }
+          ]
+        }
+      }
+    }
+  }
+}
