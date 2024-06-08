@@ -3,7 +3,7 @@
   "header": {
     "description": "Show various game mechanic distances and measurements, armor stands with gunpowder, prismarine shards, sticks, planks, turtle eggs, rotten flesh, and spider eyes will show extra data.",
     "name": "BE_Tech_RP_v0.2.7",
-    "uuid": "9fc2caea-fbf1-4cb3-9449-db869cb37e8d",
+    "uuid": "aad2b722-f0fe-4726-84a9-85a4f770b0ab",
     "version": [
       0,
       2,
@@ -19,7 +19,7 @@
     {
       "description": "",
       "type": "resources",
-      "uuid": "da767ab5-dea2-48b6-b351-037ca9b68248",
+      "uuid": "319c52b8-0b3d-4c1a-9bd9-2a2ca61ef664",
       "version": [
         0,
         0,

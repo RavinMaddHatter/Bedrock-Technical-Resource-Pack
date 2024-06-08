@@ -21,7 +21,7 @@
 	]
       },
       "minecraft:particle_lifetime_expression": {
-        "expiration_expression": "(query.effect_particle_count > 56 && v.particle_age > 1) || (query.distance_from_camera < 32 && !query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:emerald_block', 'minecraft:gold_block', 'minecraft:diamond_block', 'minecraft:iron_block', 'minecraft:netherite_block'))",
+        "expiration_expression": "(query.effect_particle_count > v.p_cap && v.particle_age > 1) || (query.distance_from_camera < 32 && !query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:emerald_block', 'minecraft:gold_block', 'minecraft:diamond_block', 'minecraft:iron_block', 'minecraft:netherite_block'))",
         "max_lifetime": 86400
       },
       "minecraft:particle_motion_parametric": {

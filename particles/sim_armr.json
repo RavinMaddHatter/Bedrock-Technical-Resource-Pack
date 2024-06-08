@@ -21,7 +21,7 @@
 	]
       },
       "minecraft:particle_lifetime_expression": {
-        "expiration_expression": "(query.effect_particle_count > 1 && v.particle_age > 1) || (query.distance_from_camera < 32 && query.get_equipped_item_name(0) != 'stick')",
+        "expiration_expression": "(query.effect_particle_count > v.p_cap && v.particle_age > 1) || (query.distance_from_camera < 32 && query.get_equipped_item_name(0) != 'stick')",
         "max_lifetime": 86400
       },
       "minecraft:particle_motion_parametric": {
