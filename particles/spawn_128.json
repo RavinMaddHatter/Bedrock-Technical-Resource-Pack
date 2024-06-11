@@ -2,7 +2,7 @@
   "format_version": "1.10.0",
   "particle_effect": {
     "description": {
-      "identifier": "addon:spawn_128_plyr",
+      "identifier": "addon:spawn_128",
       "basic_render_parameters": {
         "material": "particles_blend",
         "texture": "textures/spawn_128"
@@ -21,7 +21,7 @@
 	]
       },
       "minecraft:particle_lifetime_expression": {
-        "expiration_expression": "v.toggle_action = query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell') && query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell');	v.toggle1 = v.toggle_action && !v.toggle3 ? 1 : 0;		v.toggle2 = v.toggle1 && !v.toggle2 ? 1 : (v.toggle1 && v.toggle2 ? 0 : v.toggle2);		v.toggle3 = v.toggle_action ? 1 : 0; return v.toggle2;",
+        "expiration_expression": "v.toggle_action = query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell') && query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell'); v.toggle1 = v.toggle_action && !v.toggle3 ? 1 : 0; v.toggle2 = v.toggle1 && !v.toggle2 ? 1 : (v.toggle1 && v.toggle2 ? 0 : v.toggle2); v.toggle3 = v.toggle_action ? 1 : 0; return v.source == 'player' ? v.toggle2 : ((query.effect_particle_count > v.p_cap && v.particle_age > 1) || (query.distance_from_camera < 32 && !query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:acacia_planks', 'minecraft:bamboo_planks', 'minecraft:birch_planks', 'minecraft:cherry_planks', 'minecraft:crimson_planks', 'minecraft:dark_oak_planks', 'minecraft:jungle_planks', 'minecraft:mangrove_planks', 'minecraft:oak_planks', 'minecraft:spruce_planks', 'minecraft:warped_planks')));",
         "max_lifetime": 86400
       },
       "minecraft:particle_motion_parametric": {

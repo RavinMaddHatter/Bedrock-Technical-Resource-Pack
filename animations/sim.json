@@ -6,8 +6,8 @@
       "loop": true,
       "particle_effects": {
         "0.0": [
-          { "effect": "sim_plyr" },
-	  { "effect": "spawn_marker_plyr", "pre_effect_script": "v.uv_z = 5;" }
+          { "effect": "sim", "pre_effect_script": "v.source = 'player'; v.p_cap = 1;" },
+	  { "effect": "spawn_marker", "pre_effect_script": "v.source = 'player'; v.p_cap = 1; v.uv_z = 5;" }
         ]
       }
     },
@@ -16,7 +16,7 @@
       "loop": true,
       "particle_effects": {
         "0.0": [
-          { "effect": "sim_armr", "pre_effect_script": "v.p_cap = 1;" }
+          { "effect": "sim", "pre_effect_script": "v.source = 'armor_stand'; v.p_cap = 1;" }
         ]
       }
     }

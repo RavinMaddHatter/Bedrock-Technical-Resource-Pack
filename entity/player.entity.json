@@ -95,14 +95,14 @@
 	"slime_23": "addon:slime_23",
 	"slime_24": "addon:slime_24",
 	"slime_25": "addon:slime_25",
-	"sim_plyr": "addon:sim_plyr",
-	"spawn4_xz_plyr": "addon:spawn4_xz_plyr",
-	"spawn4_y_plyr": "addon:spawn4_y_plyr",
-	"big_spawn_plyr": "addon:big_spawn_plyr",
-	"spawn_128_plyr": "addon:spawn_128_plyr",
-	"spawn_marker_plyr": "addon:spawn_marker_plyr",
-	"beacon_in_plyr": "addon:beacon_in_plyr",
-	"beacon_out_plyr": "addon:beacon_out_plyr"
+	"sim": "addon:sim",
+	"spawn4_xz": "addon:spawn4_xz",
+	"spawn4_y": "addon:spawn4_y",
+	"big_spawn": "addon:big_spawn",
+	"spawn_128": "addon:spawn_128",
+	"spawn_marker": "addon:spawn_marker",
+	"beacon_in": "addon:beacon_in",
+	"beacon_out": "addon:beacon_out"
       }
     }
   }

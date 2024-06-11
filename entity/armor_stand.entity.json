@@ -113,14 +113,14 @@
 	"beacon_control_armr": "controller.animation.beacon_control_armr"
       },
       "particle_effects": {
-	"sim_armr": "addon:sim_armr",
-	"spawn4_xz_armr": "addon:spawn4_xz_armr",
-	"spawn4_y_armr": "addon:spawn4_y_armr",
-	"big_spawn_armr": "addon:big_spawn_armr",
-	"spawn_128_armr": "addon:spawn_128_armr",
-	"spawn_marker_armr": "addon:spawn_marker_armr",
-	"beacon_in_armr": "addon:beacon_in_armr",
-	"beacon_out_armr": "addon:beacon_out_armr"
+	"sim": "addon:sim",
+	"spawn4_xz": "addon:spawn4_xz",
+	"spawn4_y": "addon:spawn4_y",
+	"big_spawn": "addon:big_spawn",
+	"spawn_128": "addon:spawn_128",
+	"spawn_marker": "addon:spawn_marker",
+	"beacon_in": "addon:beacon_in",
+	"beacon_out": "addon:beacon_out"
       },
       "render_controllers": [
         "controller.render.armor_stand", //vanilla

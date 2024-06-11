@@ -2,7 +2,7 @@
   "format_version": "1.10.0",
   "particle_effect": {
     "description": {
-      "identifier": "addon:beacon_out_armr",
+      "identifier": "addon:beacon_out",
       "basic_render_parameters": {
         "material": "particles_blend_cull",
         "texture": "textures/beacon"
@@ -15,13 +15,13 @@
       "minecraft:emitter_lifetime_once": {},
       "minecraft:emitter_shape_point": {
 	"offset": [
-	  "v.spawn_marker_x = math.floor(query.position(0)); return 0;",
-	  "v.spawn_marker_y = query.position(1) - 1.0; return 0;",
+	  "v.toggle1 = 0; v.toggle2 = 1; v.toggle3 = 0; v.spawn_marker_x = math.floor(query.position(0)); return 0;",
+	  "v.spawn_marker_y = query.position(1) - (v.source == 'player' ? 2.6 : 1.0); return 0;",
 	  "v.spawn_marker_z = math.floor(query.position(2)); return 0;"
 	]
       },
       "minecraft:particle_lifetime_expression": {
-        "expiration_expression": "(query.effect_particle_count > v.p_cap && v.particle_age > 1) || (query.distance_from_camera < 32 && !query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:emerald_block', 'minecraft:gold_block', 'minecraft:diamond_block', 'minecraft:iron_block', 'minecraft:netherite_block'))",
+        "expiration_expression": "v.toggle_action = query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell') && query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell'); v.toggle1 = v.toggle_action && !v.toggle3 ? 1 : 0; v.toggle2 = v.toggle1 && !v.toggle2 ? 1 : (v.toggle1 && v.toggle2 ? 0 : v.toggle2); v.toggle3 = v.toggle_action ? 1 : 0; return v.source == 'player' ? v.toggle2 : ((query.effect_particle_count > v.p_cap && v.particle_age > 1) || (query.distance_from_camera < 32 && !query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:emerald_block', 'minecraft:gold_block', 'minecraft:diamond_block', 'minecraft:iron_block', 'minecraft:netherite_block')));",
         "max_lifetime": 86400
       },
       "minecraft:particle_motion_parametric": {
