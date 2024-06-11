@@ -16,7 +16,7 @@
       "minecraft:emitter_shape_point": {
 	"offset": [
 	  "v.toggle1 = 0; v.toggle2 = 1; v.toggle3 = 0; return 0;",
-	  "v.source == 'player' ? 0 : 0.1",
+	  "v.source == 'player' ? -0.5 : 1.1",
 	  0
 	]
       },

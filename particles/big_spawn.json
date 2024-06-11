@@ -16,7 +16,7 @@
       "minecraft:emitter_shape_point": {
         "offset": [
           "v.toggle1 = 0; v.toggle2 = 1; v.toggle3 = 0; v.spawn6_loc_x = (math.floor(query.position(0)/16)*16) + v.off_pos_x; return 0;",
-          "v.spawn6_loc_y = query.position(1); return 0;",
+          "v.spawn6_loc_y = query.position(1) + (v.source == 'player' ? -0.5 : 1.1); return 0;",
           "v.spawn6_loc_z = (math.floor(query.position(2)/16)*16) + v.off_pos_z; return 0;"
         ]
       },
