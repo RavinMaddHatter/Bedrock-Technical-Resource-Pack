@@ -3,6 +3,7 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "minecraft:player",
+      "min_engine_version": "1.8.0",
       "scripts": {
         "initialize": [
           "variable.is_holding_right = 0.0;", //Vanilla
