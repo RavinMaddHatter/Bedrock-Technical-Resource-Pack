@@ -52,7 +52,7 @@
 
           "v.slime_show = query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:nautilus_shell');",
 
-          "v.spawn_toggle_action = query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell') && query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell');", //Vanilla
+          "v.spawn_toggle_action = query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell') && query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell');",
           "v.spawn_toggle1 = v.spawn_toggle_action && !v.spawn_toggle3 ? 1 : 0;",
           "v.spawn_toggle2 = v.spawn_toggle1 && v.spawn_toggle2 < 7 ? v.spawn_toggle2 + 1 : (v.spawn_toggle1 && v.spawn_toggle2 == 7 ? 0 : v.spawn_toggle2);",
           "v.spawn_toggle3 = v.spawn_toggle_action ? 1 : 0;"
