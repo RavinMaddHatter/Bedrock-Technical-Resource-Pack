@@ -9,20 +9,13 @@ way to make the tridents or other AI-free entities host several geometries we ar
 
 This resource pack enhances the visual feedback for many technical aspects of Minecraft, including:
 
-- Hitbox visualization
-- Spawning area indicators
+- Spawning spot indicators
 - Entity behavior indicators
-- And many more technical features
+- Spawn spheres
+- Slime chunks
+- Beacon areas
 
 By making these normally invisible or hard-to-see game mechanics visible, this pack is invaluable for technical players, redstone engineers, map makers, and anyone interested in understanding how Minecraft works under the hood.
-
-## Features
-
-- Visual indicators for mob spawning ranges
-- Enhanced armor stand functionality with special items
-- Technical block behavior visualization
-- Improved debugging capabilities for complex builds
-- Compatible with the latest Minecraft Bedrock Edition versions
 
 ## Installation
 
@@ -39,7 +32,8 @@ By making these normally invisible or hard-to-see game mechanics visible, this p
 2. Extract the contents into the following location depending on your platform:
     - **Windows 10/11**: `%localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\resource_packs\`
     - **iOS/Android**: `games/com.mojang/resource_packs/`
-    - **Nintendo Switch**: Import via USB connection or Realms
+    - **Nintendo Switch**: Import via USB connection or Realms 
+	- **PS5 / Xbox**: No known install method documented 
 3. Launch Minecraft and activate the pack in the game settings
 
 ## How to Contribute
