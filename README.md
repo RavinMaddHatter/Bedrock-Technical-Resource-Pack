@@ -11,7 +11,6 @@ This resource pack enhances the visual feedback for many technical aspects of Mi
 
 - Hitbox visualization
 - Spawning area indicators
-- Redstone signal strength displays
 - Entity behavior indicators
 - And many more technical features
 
