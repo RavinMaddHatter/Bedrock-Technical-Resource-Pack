@@ -22,7 +22,6 @@ By making these normally invisible or hard-to-see game mechanics visible, this p
 - Visual indicators for mob spawning ranges
 - Enhanced armor stand functionality with special items
 - Technical block behavior visualization
-- Redstone signal strength indicators
 - Improved debugging capabilities for complex builds
 - Compatible with the latest Minecraft Bedrock Edition versions
 
