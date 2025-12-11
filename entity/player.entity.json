@@ -55,7 +55,9 @@
           "v.spawn_toggle_action = query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell') && query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:firework_rocket', 'minecraft:nautilus_shell');",
           "v.spawn_toggle1 = v.spawn_toggle_action && !v.spawn_toggle3 ? 1 : 0;",
           "v.spawn_toggle2 = v.spawn_toggle1 && v.spawn_toggle2 < 7 ? v.spawn_toggle2 + 1 : (v.spawn_toggle1 && v.spawn_toggle2 == 7 ? 0 : v.spawn_toggle2);",
-          "v.spawn_toggle3 = v.spawn_toggle_action ? 1 : 0;"
+          "v.spawn_toggle3 = v.spawn_toggle_action ? 1 : 0;",
+		  "variable.melee_spear_equipped = query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:wood_spear', 'minecraft:stone_spear', 'minecraft:copper_spear', 'minecraft:iron_spear', 'minecraft:gold_spear', 'minecraft:diamond_spear', 'minecraft:netherite_spear');"
+
         ],
         "animate": [
           "root", //Vanilla
@@ -65,7 +67,15 @@
           "spawn_control_plyr",
           "beacon_control_plyr"
         ],
-        "should_update_bones_and_effects_offscreen": true
+		"variables": {
+          "variable.fp_melee_spear_use_attachable_rotation_z": "public",//Vanilla
+          "variable.tp_melee_spear_use_attachable_rotation_z": "public",//Vanilla
+          "variable.fp_melee_spear_attack_attachable_rotation_z": "public",//Vanilla
+          "variable.tp_melee_spear_attack_attachable_position_z": "public",//Vanilla
+          "variable.attack_time": "public",//Vanilla
+          "variable.item_use_normalized": "public"//Vanilla
+        },
+        "should_update_bones_and_effects_offscreen": "1.0"
       },
       "animations": {
         "root": "controller.animation.player.root",
@@ -128,6 +138,17 @@
         "brushing": "animation.humanoid.brushing",
         "crawling": "animation.player.crawl",
         "crawling.legs": "animation.player.crawl.legs",
+        "swimming.no_right_arm": "animation.player.swim.no_right_arm",
+        "crawling.no_right_arm": "animation.player.crawl.no_right_arm",
+		"riding.root": "animation.player.riding.root",
+		"first_person_melee_spear_use": "animation.player.first_person.melee_spear_use",
+        "first_person_melee_spear_hold": "animation.player.first_person.melee_spear_hold",
+        "first_person_melee_spear_attack": "animation.player.first_person.melee_spear_attack",
+        "first_person_melee_spear_controller": "controller.animation.player.first_person_melee_spear",
+        "third_person_melee_spear_use": "animation.humanoid.melee_spear_use",
+        "third_person_melee_spear_hold": "animation.humanoid.melee_spear_hold",
+        "third_person_melee_spear_attack": "animation.player.melee_spear_attack",
+        "third_person_melee_spear_controller": "controller.animation.player.melee_spear",
         "holding_heavy_core": "animation.player.holding_heavy_core",
         "chunk": "animation.chunk",
         "chunk_control": "controller.animation.chunk_control",
